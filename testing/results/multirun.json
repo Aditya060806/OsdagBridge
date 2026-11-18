@@ -1,0 +1,112 @@
+[
+ {
+  "session": "S1",
+  "from": "TC01",
+  "to": "TC02",
+  "cad3d": true,
+  "plots": true,
+  "cross_section": true,
+  "top_view": true,
+  "info_span_ok": true,
+  "cad_rendered": true
+ },
+ {
+  "session": "S1",
+  "from": "TC02",
+  "to": "TC03",
+  "cad3d": true,
+  "plots": true,
+  "cross_section": true,
+  "top_view": true,
+  "info_span_ok": true,
+  "cad_rendered": true
+ },
+ {
+  "session": "S1",
+  "from": "TC03",
+  "to": "TC04",
+  "cad3d": true,
+  "plots": true,
+  "cross_section": true,
+  "top_view": true,
+  "info_span_ok": true,
+  "cad_rendered": true
+ },
+ {
+  "session": "S2",
+  "from": "TC05",
+  "to": "TC06",
+  "cad3d": true,
+  "plots": true,
+  "cross_section": false,
+  "top_view": false,
+  "info_span_ok": true,
+  "cad_rendered": true
+ },
+ {
+  "session": "S2",
+  "from": "TC06",
+  "to": "TC07",
+  "cad3d": true,
+  "plots": false,
+  "cross_section": false,
+  "top_view": false,
+  "info_span_ok": true,
+  "cad_rendered": true
+ },
+ {
+  "session": "S2",
+  "from": "TC07",
+  "to": "TC08",
+  "cad3d": true,
+  "plots": false,
+  "cross_section": false,
+  "top_view": false,
+  "info_span_ok": true,
+  "cad_rendered": true
+ },
+ {
+  "session": "S3",
+  "from": "TC09",
+  "to": "TC10",
+  "cad3d": true,
+  "plots": true,
+  "cross_section": true,
+  "top_view": true,
+  "info_span_ok": true,
+  "cad_rendered": true
+ },
+ {
+  "session": "S3",
+  "from": "TC10",
+  "to": "TC11",
+  "cad3d": true,
+  "plots": true,
+  "cross_section": true,
+  "top_view": true,
+  "info_span_ok": true,
+  "cad_rendered": true
+ },
+ {
+  "session": "S5",
+  "from": "TC17",
+  "to": "TC18",
+  "cad3d": true,
+  "plots": true,
+  "cross_section": true,
+  "top_view": true,
+  "info_span_ok": true,
+  "cad_rendered": true
+ },
+ {
+  "session": "S6",
+  "from": "TC19",
+  "to": "TC20",
+  "cad3d": true,
+  "plots": true,
+  "cross_section": true,
+  "top_view": true,
+  "info_span_ok": true,
+  "cad_rendered": true
+ }
+]

@@ -1,0 +1,13 @@
+{
+ "geometry.span": "45.0",
+ "geometry.carriageway_width": "7.5",
+ "geometry.skew_angle": "-15.0",
+ "structure.type": "Highway Bridge",
+ "geometry.include_median": "Yes",
+ "geometry.footpath": "None",
+ "geometry.design_mode": "Optimized",
+ "material.girder": "custom_steel_1200_1400",
+ "material.cross_bracing": "E 350A",
+ "material.end_diaphragm": "E 350A",
+ "material.deck": "M40"
+}

@@ -1,0 +1,71 @@
+{
+ "title": "Input validation (no design runs)",
+ "location": null,
+ "cases": [
+  {
+   "id": "TC12",
+   "title": "Design with empty required fields"
+  },
+  {
+   "id": "TC13",
+   "title": "Span below/above limits: 19, 46",
+   "probe_text": [
+    [
+     "geometry.span",
+     19
+    ],
+    [
+     "geometry.span",
+     46
+    ]
+   ],
+   "design": false
+  },
+  {
+   "id": "TC14",
+   "title": "Carriageway below/above limits: 4.0, 24; 7.0 with median",
+   "probe_text": [
+    [
+     "geometry.carriageway_width",
+     4.0
+    ],
+    [
+     "geometry.carriageway_width",
+     24
+    ]
+   ],
+   "probe_median": 7.0,
+   "design": false
+  },
+  {
+   "id": "TC15",
+   "title": "Skew beyond +/-15: 20, -20",
+   "probe_text": [
+    [
+     "geometry.skew_angle",
+     20
+    ],
+    [
+     "geometry.skew_angle",
+     -20
+    ]
+   ],
+   "design": false
+  },
+  {
+   "id": "TC16",
+   "title": "Custom steel out of range: Fy 1300, density 30",
+   "material": {
+    "material.girder": {
+     "material.girder.density": 30,
+     "material.girder.fy": 1300,
+     "material.girder.fu": 1400,
+     "material.girder.e": 200,
+     "material.girder.poisson": 0.3,
+     "material.girder.thermal": 11.7
+    }
+   },
+   "design": false
+  }
+ ]
+}

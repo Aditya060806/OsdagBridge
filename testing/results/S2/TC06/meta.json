@@ -1,0 +1,22 @@
+{
+ "custom_material": {
+  "material.girder": {
+   "name": "custom_steel_410_540",
+   "typed": {
+    "material.girder.density": "80.0",
+    "material.girder.fy": "410",
+    "material.girder.fu": "540",
+    "material.girder.e": "210",
+    "material.girder.g": "80.8",
+    "material.girder.poisson": "0.3",
+    "material.girder.thermal": "12.0"
+   }
+  }
+ },
+ "design": {
+  "started": true,
+  "seconds": 29.5,
+  "locked_after": true,
+  "popups": []
+ }
+}

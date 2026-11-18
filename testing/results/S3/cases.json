@@ -1,0 +1,67 @@
+{
+ "title": "Custom design mode, custom girder section, stiffeners, deck and stud inputs, 3 runs",
+ "location": [
+  "Assam",
+  "Guwahati (Bhorjar) (A)"
+ ],
+ "cases": [
+  {
+   "id": "TC09",
+   "title": "Custom section D1800 450x25/550x32 tw14, stiffeners, deck 230 mm, stud 22 mm",
+   "text": {
+    "geometry.span": 35,
+    "geometry.carriageway_width": 9,
+    "geometry.skew_angle": 0
+   },
+   "mode": "Custom",
+   "additional": {
+    "member_properties.girder_details.section_input.symmetry": "Girder Unsymmetric",
+    "member_properties.girder_details.section_input.depth": 1800,
+    "member_properties.girder_details.section_input.top_flange_width": 450,
+    "member_properties.girder_details.section_input.top_flange_thickness": 25,
+    "member_properties.girder_details.section_input.bottom_flange_width": 550,
+    "member_properties.girder_details.section_input.bottom_flange_thickness": 32,
+    "member_properties.girder_details.section_input.web_thickness": 14,
+    "member_properties.stiffener_details.intermediate_stiffener": "Yes",
+    "member_properties.stiffener_details.intermediate_stiffener_spacing": 1800,
+    "member_properties.stiffener_details.intermediate_stiffener_thickness": 12,
+    "member_properties.stiffener_details.intermediate_stiffener_outstand": 150,
+    "member_properties.stiffener_details.bearing_stiffener_plate_thickness": 16,
+    "member_properties.stiffener_details.bearing_stiffener_outstand": 200,
+    "typical_section.deck_thickness": 230,
+    "typical_section.wearing_course.thickness": 65,
+    "design_options.shear_studs.diameter": 22,
+    "design_options.shear_studs.height": 120,
+    "design_options.deck.bottom_clear_cover": 40
+   },
+   "buttons": [
+    "Apply changes to exterior girders",
+    "Apply changes to interior girders",
+    "Apply changes to all custom"
+   ],
+   "report": true
+  },
+  {
+   "id": "TC10",
+   "title": "Unlock: Additional Inputs only (D 1600, deck 260 mm, stiffener spacing 1500)",
+   "unlock": true,
+   "additional": {
+    "member_properties.girder_details.section_input.depth": 1600,
+    "typical_section.deck_thickness": 260,
+    "member_properties.stiffener_details.intermediate_stiffener_spacing": 1500
+   },
+   "buttons": [
+    "Apply changes to exterior girders",
+    "Apply changes to interior girders"
+   ]
+  },
+  {
+   "id": "TC11",
+   "title": "Unlock: change only span to 38 m (Additional Inputs untouched)",
+   "unlock": true,
+   "text": {
+    "geometry.span": 38
+   }
+  }
+ ]
+}

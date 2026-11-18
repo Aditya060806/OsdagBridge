@@ -1,0 +1,112 @@
+{
+ "G1": {
+  "dock": {
+   "util.flexure": "31%",
+   "util.shear": "110%",
+   "util.interaction": "32%",
+   "util.ltb": "34%",
+   "util.long_trans_shear": "39%",
+   "util.fatigue": "130%",
+   "util.stress_limitation": "42%",
+   "util.deflection_crack": "69%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 31.1,
+   "util.shear": 110.13999999999999,
+   "util.interaction": 32.08,
+   "util.ltb": 34.12,
+   "util.long_trans_shear": 39.43,
+   "util.fatigue": 129.70999999999998,
+   "util.stress_limitation": 42.309999999999995,
+   "util.deflection_crack": 68.57
+  }
+ },
+ "G2": {
+  "dock": {
+   "util.flexure": "31%",
+   "util.shear": "110%",
+   "util.interaction": "32%",
+   "util.ltb": "34%",
+   "util.long_trans_shear": "39%",
+   "util.fatigue": "130%",
+   "util.stress_limitation": "42%",
+   "util.deflection_crack": "69%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 31.1,
+   "util.shear": 110.13999999999999,
+   "util.interaction": 32.08,
+   "util.ltb": 34.12,
+   "util.long_trans_shear": 39.43,
+   "util.fatigue": 129.70999999999998,
+   "util.stress_limitation": 42.309999999999995,
+   "util.deflection_crack": 68.57
+  }
+ },
+ "G3": {
+  "dock": {
+   "util.flexure": "31%",
+   "util.shear": "110%",
+   "util.interaction": "32%",
+   "util.ltb": "34%",
+   "util.long_trans_shear": "39%",
+   "util.fatigue": "130%",
+   "util.stress_limitation": "42%",
+   "util.deflection_crack": "69%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 31.1,
+   "util.shear": 110.13999999999999,
+   "util.interaction": 32.08,
+   "util.ltb": 34.12,
+   "util.long_trans_shear": 39.43,
+   "util.fatigue": 129.70999999999998,
+   "util.stress_limitation": 42.309999999999995,
+   "util.deflection_crack": 68.57
+  }
+ },
+ "G4": {
+  "dock": {
+   "util.flexure": "31%",
+   "util.shear": "110%",
+   "util.interaction": "32%",
+   "util.ltb": "34%",
+   "util.long_trans_shear": "39%",
+   "util.fatigue": "130%",
+   "util.stress_limitation": "42%",
+   "util.deflection_crack": "69%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 31.1,
+   "util.shear": 110.13999999999999,
+   "util.interaction": 32.08,
+   "util.ltb": 34.12,
+   "util.long_trans_shear": 39.43,
+   "util.fatigue": 129.70999999999998,
+   "util.stress_limitation": 42.309999999999995,
+   "util.deflection_crack": 68.57
+  }
+ },
+ "G5": {
+  "dock": {
+   "util.flexure": "31%",
+   "util.shear": "110%",
+   "util.interaction": "32%",
+   "util.ltb": "34%",
+   "util.long_trans_shear": "39%",
+   "util.fatigue": "130%",
+   "util.stress_limitation": "42%",
+   "util.deflection_crack": "69%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 31.1,
+   "util.shear": 110.13999999999999,
+   "util.interaction": 32.08,
+   "util.ltb": 34.12,
+   "util.long_trans_shear": 39.43,
+   "util.fatigue": 129.70999999999998,
+   "util.stress_limitation": 42.309999999999995,
+   "util.deflection_crack": 68.57
+  }
+ }
+}

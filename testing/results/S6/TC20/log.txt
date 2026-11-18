@@ -1,0 +1,599 @@
+[2026-11-17 13:15:36] Log initialized
+[2026-11-17 13:15:38] --------------------------------------------- S T A R T I N G   A N A L Y S I S
+[2026-11-17 13:15:38]   STAGE 1 : INPUT VALIDATION  [0%]
+[2026-11-17 13:15:38]   STAGE 1 COMPLETE [7%] : INPUT VALIDATION
+[2026-11-17 13:15:38]   STAGE 2 : BRIDGE LAYOUT SOLVING  [7%]
+[2026-11-17 13:15:38]   STAGE 2 COMPLETE [14%] : BRIDGE LAYOUT SOLVING
+[2026-11-17 13:15:38]   STAGE 3 : GRILLAGE SETUP  [14%]
+[2026-11-17 13:15:38]   Bridge width from layout: 8.5 m
+[2026-11-17 13:15:38]   STAGE 3 COMPLETE [21%] : GRILLAGE SETUP
+[2026-11-17 13:15:38]   STAGE 4A : DEAD LOAD APPLICATION  [21%]
+[2026-11-17 13:15:38]   Self weight line load @ z=0.600 m: 2741.12 N/m (A=0.03492 m²)
+[2026-11-17 13:15:38]   Self weight line load @ z=1.817 m: 2741.12 N/m (A=0.03492 m²)
+[2026-11-17 13:15:38]   Self weight line load @ z=3.033 m: 2741.12 N/m (A=0.03492 m²)
+[2026-11-17 13:15:38]   Self weight line load @ z=4.250 m: 2741.12 N/m (A=0.03492 m²)
+[2026-11-17 13:15:38]   Self weight line load @ z=5.467 m: 2741.12 N/m (A=0.03492 m²)
+[2026-11-17 13:15:38]   Self weight line load @ z=6.683 m: 2741.12 N/m (A=0.03492 m²)
+[2026-11-17 13:15:38]   Self weight line load @ z=7.900 m: 2741.12 N/m (A=0.03492 m²)
+[2026-11-17 13:15:39]   Deck slab load magnitude: 6250.00 N/m²
+[2026-11-17 13:15:39]   Wearing course load magnitude: 1250.00 N/m²
+[2026-11-17 13:15:39]   Crash barrier line load magnitude: 6540.00 N/m
+[2026-11-17 13:15:39]   [Crash barrier left] line load: start(x=0.000, z=0.250)  end(x=30.000, z=0.250)
+[2026-11-17 13:15:39]   [Crash barrier right] line load: start(x=0.000, z=8.250)  end(x=30.000, z=8.250)
+[2026-11-17 13:15:39]   Median line load magnitude: 4000.00 N/m
+[2026-11-17 13:15:40]   STAGE 4A COMPLETE [28%] : DEAD LOAD APPLICATION
+[2026-11-17 13:15:40]   STAGE 4B : LIVE LOAD APPLICATION  [28%]
+[2026-11-17 13:15:43]   STAGE 4B COMPLETE [35%] : LIVE LOAD APPLICATION
+[2026-11-17 13:15:43]   STAGE 4C : WIND LOAD APPLICATION  [35%]
+[2026-11-17 13:15:43]   Wind loads (IRC:6-2017): Pz=463.7 N/m²  FT=14.41 kN  FT/m=0.480 kN/m  FL=14.1282 N/m²  FV=695.55 N/m²
+[2026-11-17 13:15:43]   STAGE 4C COMPLETE [42%] : WIND LOAD APPLICATION
+[2026-11-17 13:15:43]   STAGE 4D : TEMPERATURE LOAD APPLICATION  [42%]
+[2026-11-17 13:15:43]   Temperature load absent; skipping.
+[2026-11-17 13:15:43]   STAGE 4D COMPLETE [50%] : TEMPERATURE LOAD APPLICATION
+[2026-11-17 13:15:43]   STAGE 4E : SEISMIC LOAD APPLICATION  [50%]
+[2026-11-17 13:15:43]   Seismic inputs: DL=2488.1 kN  Governing LL=0.0 kN
+[2026-11-17 13:15:43]   Seismic loads (IRC:6-2017 Cl.218): Z=0.16  Ah=0.2240  Av=0.1493
+[2026-11-17 13:15:43]     Feq_X=557.34 kN  Feq_Z=557.34 kN  Feq_Y=371.48 kN
+[2026-11-17 13:15:43]   STAGE 4E COMPLETE [57%] : SEISMIC LOAD APPLICATION
+[2026-11-17 13:15:43]   STAGE 4F : LOAD COMBINATION ENVELOPE  [57%]
+[2026-11-17 13:15:43]     Running initial analysis for live load envelope...
+[2026-11-17 13:15:44]     Creating governing LL load case...
+[2026-11-17 13:15:44]   Governing LL: Case2 1xClass70R  (max |Mz_i| = 599.81 kNm)
+[2026-11-17 13:15:44]     Creating DL+LL combination...
+[2026-11-17 13:15:45]     Creating ULS and SLS combinations...
+[2026-11-17 13:15:45]   ULS Basic combinations:
+[2026-11-17 13:15:46]     Created: BASIC_1: 1.35DL + 1.75DW + 1.5LL + 0.9WL       DL=1.35(adding)  Surf=1.75  live_load leading
+[2026-11-17 13:15:48]     Created: BASIC_2: 1.35DL + 1.75DW + 1.15LL + 1.5WL      DL=1.35(adding)  Surf=1.75  wind_load leading
+[2026-11-17 13:15:49]     Created: BASIC_3: 1.35DL + 1.75DW + 1.15LL + 0.9WL      DL=1.35(adding)  Surf=1.75  thermal_load leading
+[2026-11-17 13:15:50]     Created: BASIC_4: 1.0DL + 1.0DW + 1.5LL + 0.9WL         DL=1.0(relieving)  Surf=1.0  live_load leading
+[2026-11-17 13:15:51]     Created: BASIC_5: 1.0DL + 1.0DW + 1.15LL + 1.5WL        DL=1.0(relieving)  Surf=1.0  wind_load leading
+[2026-11-17 13:15:53]     Created: BASIC_6: 1.0DL + 1.0DW + 1.15LL + 0.9WL        DL=1.0(relieving)  Surf=1.0  thermal_load leading
+[2026-11-17 13:15:53]   ULS Accidental combinations:
+[2026-11-17 13:15:54]     Created: ACCIDENTAL_1: 1.0DL + 1.0DW + 0.75LL           DL=1.0  vehicle_collision(no lc)  live_load leading
+[2026-11-17 13:15:55]     Created: ACCIDENTAL_2: 1.0DL + 1.0DW + 0.75LL           DL=1.0  barge_impact(no lc)  live_load leading
+[2026-11-17 13:15:56]     Created: ACCIDENTAL_3: 1.0DL + 1.0DW + 0.75LL           DL=1.0  floating_bodies(no lc)  live_load leading
+[2026-11-17 13:15:56]   ULS Seismic combinations:
+[2026-11-17 13:15:57]     Created: SEISMIC_1: 1.35DL + 1.75DW + 0.2LL + 1.5EL     DL=1.35(adding)  EL=1.5(service)
+[2026-11-17 13:15:59]     Created: SEISMIC_2: 1.35DL + 1.75DW + 0.2LL + 0.75EL    DL=1.35(adding)  EL=0.75(construction)
+[2026-11-17 13:16:00]     Created: SEISMIC_3: 1.0DL + 1.0DW + 0.2LL + 1.5EL       DL=1.0(relieving)  EL=1.5(service)
+[2026-11-17 13:16:01]     Created: SEISMIC_4: 1.0DL + 1.0DW + 0.2LL + 0.75EL      DL=1.0(relieving)  EL=0.75(construction)
+[2026-11-17 13:16:01]   Total ULS combinations created: 13
+[2026-11-17 13:16:01]   SLS Rare combinations:
+[2026-11-17 13:16:02]     Created: SLS_RARE_1: 1.0DL + 1.2DW + 1.0LL + 0.6WL      DL=1.0  Surf=1.2(adding)  live_load leading
+[2026-11-17 13:16:04]     Created: SLS_RARE_2: 1.0DL + 1.2DW + 0.75LL + 1.0WL     DL=1.0  Surf=1.2(adding)  wind_load leading
+[2026-11-17 13:16:05]     Created: SLS_RARE_3: 1.0DL + 1.2DW + 0.75LL + 0.6WL     DL=1.0  Surf=1.2(adding)  thermal_load leading
+[2026-11-17 13:16:06]     Created: SLS_RARE_4: 1.0DL + 1.0DW + 1.0LL + 0.6WL      DL=1.0  Surf=1.0(relieving)  live_load leading
+[2026-11-17 13:16:07]     Created: SLS_RARE_5: 1.0DL + 1.0DW + 0.75LL + 1.0WL     DL=1.0  Surf=1.0(relieving)  wind_load leading
+[2026-11-17 13:16:09]     Created: SLS_RARE_6: 1.0DL + 1.0DW + 0.75LL + 0.6WL     DL=1.0  Surf=1.0(relieving)  thermal_load leading
+[2026-11-17 13:16:09]   SLS Frequent combinations:
+[2026-11-17 13:16:10]     Created: SLS_FREQUENT_1: 1.0DL + 1.2DW + 0.75LL + 0.5WL  DL=1.0  Surf=1.2(adding)  live_load leading
+[2026-11-17 13:16:11]     Created: SLS_FREQUENT_2: 1.0DL + 1.2DW + 0.2LL + 0.6WL  DL=1.0  Surf=1.2(adding)  wind_load leading
+[2026-11-17 13:16:13]     Created: SLS_FREQUENT_3: 1.0DL + 1.2DW + 0.2LL + 0.5WL  DL=1.0  Surf=1.2(adding)  thermal_load leading
+[2026-11-17 13:16:14]     Created: SLS_FREQUENT_4: 1.0DL + 1.0DW + 0.75LL + 0.5WL  DL=1.0  Surf=1.0(relieving)  live_load leading
+[2026-11-17 13:16:15]     Created: SLS_FREQUENT_5: 1.0DL + 1.0DW + 0.2LL + 0.6WL  DL=1.0  Surf=1.0(relieving)  wind_load leading
+[2026-11-17 13:16:16]     Created: SLS_FREQUENT_6: 1.0DL + 1.0DW + 0.2LL + 0.5WL  DL=1.0  Surf=1.0(relieving)  thermal_load leading
+[2026-11-17 13:16:16]   SLS Quasi-permanent combinations:
+[2026-11-17 13:16:18]     Created: SLS_QP_1: 1.0DL + 1.2DW                        DL=1.0  Surf=1.2(adding)  TL=0.5
+[2026-11-17 13:16:19]     Created: SLS_QP_2: 1.0DL + 1.0DW                        DL=1.0  Surf=1.0(relieving)  TL=0.5
+[2026-11-17 13:16:19]   Total SLS combinations created: 14
+[2026-11-17 13:16:19]   STAGE 4F COMPLETE [64%] : LOAD COMBINATION ENVELOPE
+[2026-11-17 13:16:19]   STAGE 4G : STRUCTURAL ANALYSIS  [64%]
+[2026-11-17 13:16:20]   STAGE 4G COMPLETE [71%] : STRUCTURAL ANALYSIS
+[2026-11-17 13:16:20]   Envelope ULS (worst signed magnitude) over 13 combinations: peak |Mz_i|=1586.06 kNm  peak |dy|=40.38 mm
+[2026-11-17 13:16:20]   Envelope SLS (worst signed magnitude) over 14 combinations: peak |Mz_i|=1512.99 kNm  peak |dy|=38.42 mm
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     PLATE GIRDER BRIDGE - DESIGN SUMMARY
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     Span                  : 30.0 m
+[2026-11-17 13:16:20]     Overall width         : 8.400 m
+[2026-11-17 13:16:20]     No. of girders        : 7
+[2026-11-17 13:16:20]     Girder spacing        : 1200.0 mm
+[2026-11-17 13:16:20]     Deck overhang         : 600.0 mm
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     GIRDER G1 CROSS-SECTION (mm) / PROPERTIES (SI)
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     Total depth      D    : 1670.0
+[2026-11-17 13:16:20]     Web depth        d_w  : 1628.0
+[2026-11-17 13:16:20]     Web thickness    t_w  : 10.0
+[2026-11-17 13:16:20]     Top flange width B_ft : 510.0
+[2026-11-17 13:16:20]     Top flange thk   T_ft : 22.0
+[2026-11-17 13:16:20]     Bot flange width B_fb : 510.0
+[2026-11-17 13:16:20]     Bot flange thk   T_fb : 22.0
+[2026-11-17 13:16:20]     Area   A  : 0.034919 m^2
+[2026-11-17 13:16:20]     I_z       : 0.017654 m^4
+[2026-11-17 13:16:20]     I_y       : 0.000470 m^4
+[2026-11-17 13:16:20]     I_t (J)   : 0.000004 m^3
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     GIRDER G2 CROSS-SECTION (mm) / PROPERTIES (SI)
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     Total depth      D    : 1670.0
+[2026-11-17 13:16:20]     Web depth        d_w  : 1628.0
+[2026-11-17 13:16:20]     Web thickness    t_w  : 10.0
+[2026-11-17 13:16:20]     Top flange width B_ft : 510.0
+[2026-11-17 13:16:20]     Top flange thk   T_ft : 22.0
+[2026-11-17 13:16:20]     Bot flange width B_fb : 510.0
+[2026-11-17 13:16:20]     Bot flange thk   T_fb : 22.0
+[2026-11-17 13:16:20]     Area   A  : 0.034919 m^2
+[2026-11-17 13:16:20]     I_z       : 0.017654 m^4
+[2026-11-17 13:16:20]     I_y       : 0.000470 m^4
+[2026-11-17 13:16:20]     I_t (J)   : 0.000004 m^3
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     GIRDER G3 CROSS-SECTION (mm) / PROPERTIES (SI)
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     Total depth      D    : 1670.0
+[2026-11-17 13:16:20]     Web depth        d_w  : 1628.0
+[2026-11-17 13:16:20]     Web thickness    t_w  : 10.0
+[2026-11-17 13:16:20]     Top flange width B_ft : 510.0
+[2026-11-17 13:16:20]     Top flange thk   T_ft : 22.0
+[2026-11-17 13:16:20]     Bot flange width B_fb : 510.0
+[2026-11-17 13:16:20]     Bot flange thk   T_fb : 22.0
+[2026-11-17 13:16:20]     Area   A  : 0.034919 m^2
+[2026-11-17 13:16:20]     I_z       : 0.017654 m^4
+[2026-11-17 13:16:20]     I_y       : 0.000470 m^4
+[2026-11-17 13:16:20]     I_t (J)   : 0.000004 m^3
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     GIRDER G4 CROSS-SECTION (mm) / PROPERTIES (SI)
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     Total depth      D    : 1670.0
+[2026-11-17 13:16:20]     Web depth        d_w  : 1628.0
+[2026-11-17 13:16:20]     Web thickness    t_w  : 10.0
+[2026-11-17 13:16:20]     Top flange width B_ft : 510.0
+[2026-11-17 13:16:20]     Top flange thk   T_ft : 22.0
+[2026-11-17 13:16:20]     Bot flange width B_fb : 510.0
+[2026-11-17 13:16:20]     Bot flange thk   T_fb : 22.0
+[2026-11-17 13:16:20]     Area   A  : 0.034919 m^2
+[2026-11-17 13:16:20]     I_z       : 0.017654 m^4
+[2026-11-17 13:16:20]     I_y       : 0.000470 m^4
+[2026-11-17 13:16:20]     I_t (J)   : 0.000004 m^3
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     GIRDER G5 CROSS-SECTION (mm) / PROPERTIES (SI)
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     Total depth      D    : 1670.0
+[2026-11-17 13:16:20]     Web depth        d_w  : 1628.0
+[2026-11-17 13:16:20]     Web thickness    t_w  : 10.0
+[2026-11-17 13:16:20]     Top flange width B_ft : 510.0
+[2026-11-17 13:16:20]     Top flange thk   T_ft : 22.0
+[2026-11-17 13:16:20]     Bot flange width B_fb : 510.0
+[2026-11-17 13:16:20]     Bot flange thk   T_fb : 22.0
+[2026-11-17 13:16:20]     Area   A  : 0.034919 m^2
+[2026-11-17 13:16:20]     I_z       : 0.017654 m^4
+[2026-11-17 13:16:20]     I_y       : 0.000470 m^4
+[2026-11-17 13:16:20]     I_t (J)   : 0.000004 m^3
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     GIRDER G6 CROSS-SECTION (mm) / PROPERTIES (SI)
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     Total depth      D    : 1670.0
+[2026-11-17 13:16:20]     Web depth        d_w  : 1628.0
+[2026-11-17 13:16:20]     Web thickness    t_w  : 10.0
+[2026-11-17 13:16:20]     Top flange width B_ft : 510.0
+[2026-11-17 13:16:20]     Top flange thk   T_ft : 22.0
+[2026-11-17 13:16:20]     Bot flange width B_fb : 510.0
+[2026-11-17 13:16:20]     Bot flange thk   T_fb : 22.0
+[2026-11-17 13:16:20]     Area   A  : 0.034919 m^2
+[2026-11-17 13:16:20]     I_z       : 0.017654 m^4
+[2026-11-17 13:16:20]     I_y       : 0.000470 m^4
+[2026-11-17 13:16:20]     I_t (J)   : 0.000004 m^3
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     GIRDER G7 CROSS-SECTION (mm) / PROPERTIES (SI)
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]     Total depth      D    : 1670.0
+[2026-11-17 13:16:20]     Web depth        d_w  : 1628.0
+[2026-11-17 13:16:20]     Web thickness    t_w  : 10.0
+[2026-11-17 13:16:20]     Top flange width B_ft : 510.0
+[2026-11-17 13:16:20]     Top flange thk   T_ft : 22.0
+[2026-11-17 13:16:20]     Bot flange width B_fb : 510.0
+[2026-11-17 13:16:20]     Bot flange thk   T_fb : 22.0
+[2026-11-17 13:16:20]     Area   A  : 0.034919 m^2
+[2026-11-17 13:16:20]     I_z       : 0.017654 m^4
+[2026-11-17 13:16:20]     I_y       : 0.000470 m^4
+[2026-11-17 13:16:20]     I_t (J)   : 0.000004 m^3
+[2026-11-17 13:16:20]   ------------------------------------------------------------
+[2026-11-17 13:16:20]   STAGE 5 : GIRDER DESIGN CHECKS  [71%]
+[2026-11-17 13:16:20]   ============================================================
+[2026-11-17 13:16:20]     IRC 22:2015 DESIGN CHECK PIPELINE
+[2026-11-17 13:16:20]   ============================================================
+[2026-11-17 13:16:20]   [Step 1] Loading bridge configuration ...
+[2026-11-17 13:16:20]     Config: L=30.0m | E 350A/M40 | D=1670.0mm | 9 girders @ 1.2m
+[2026-11-17 13:16:21]   [Step 2] Running checks for 9 girder(s) ...
+[2026-11-17 13:16:21]     [INFO] bs_R_kN not set — using max Vu = 224.1 kN as bearing reaction default
+[2026-11-17 13:16:21]     [X] G1                                       max_DCR=1.135  FAIL
+[2026-11-17 13:16:21]     [X] G2                                       max_DCR=1.135  FAIL
+[2026-11-17 13:16:21]     [X] G3                                       max_DCR=1.147  FAIL
+[2026-11-17 13:16:21]     [X] G4                                       max_DCR=1.162  FAIL
+[2026-11-17 13:16:21]     [X] G5                                       max_DCR=1.165  FAIL
+[2026-11-17 13:16:21]     [X] G6                                       max_DCR=1.162  FAIL
+[2026-11-17 13:16:21]     [X] G7                                       max_DCR=1.147  FAIL
+[2026-11-17 13:16:21]     [X] G8                                       max_DCR=1.135  FAIL
+[2026-11-17 13:16:21]     [X] G9                                       max_DCR=1.135  FAIL
+[2026-11-17 13:16:21]     Controlling girder: G5  (max_DCR = 1.165)
+[2026-11-17 13:16:21]   [Step 4] Generating report for controlling girder ...
+[2026-11-17 13:16:21]   ==============================================================================
+[2026-11-17 13:16:21]                  IRC 22:2015 COMPOSITE BRIDGE DESIGN CHECK REPORT               
+[2026-11-17 13:16:21]             Demand (Analyser)  -->  IRC 22 Capacity  -->  DCR Pipeline          
+[2026-11-17 13:16:21]                           Generated: 2026-11-17 13:16:21                        
+[2026-11-17 13:16:21]   ==============================================================================
+[2026-11-17 13:16:21]   BRIDGE CONFIGURATION
+[2026-11-17 13:16:21]   --------------------
+[2026-11-17 13:16:21]     Span                    : 30.00 m
+[2026-11-17 13:16:21]     Support                 : simply_supported
+[2026-11-17 13:16:21]     Carriageway Width       : 7.50 m
+[2026-11-17 13:16:21]     Girder Spacing          : 1.20 m
+[2026-11-17 13:16:21]     No. of Girders          : 9
+[2026-11-17 13:16:21]     Beam Type               : inner
+[2026-11-17 13:16:21]     Steel Grade             : E 350A (fy = 350.0 MPa)
+[2026-11-17 13:16:21]     Concrete Grade          : M40 (fck = 40.0 MPa)
+[2026-11-17 13:16:21]     Rebar Grade             : Fe 500
+[2026-11-17 13:16:21]   STEEL SECTION (Plate Girder - Welded)
+[2026-11-17 13:16:21]   -------------------------------------
+[2026-11-17 13:16:21]     Overall Depth D         : 1,670.00 mm
+[2026-11-17 13:16:21]     Top Flange              : 510.0 x 22.0 mm
+[2026-11-17 13:16:21]     Bottom Flange           : 510.0 x 22.0 mm
+[2026-11-17 13:16:21]     Web                     : 1626 x 10.0 mm
+[2026-11-17 13:16:21]     A_steel                 : 38,700 mm2
+[2026-11-17 13:16:21]     Iz_steel                : 18,819,578,500 mm4
+[2026-11-17 13:16:21]   CONCRETE SLAB
+[2026-11-17 13:16:21]   -------------
+[2026-11-17 13:16:21]     Slab Thickness          : 250.00 mm
+[2026-11-17 13:16:21]     Haunch Depth            : 0.000 mm
+[2026-11-17 13:16:21]   DESIGN DEMANDS (Envelope ULS)
+[2026-11-17 13:16:21]   -----------------------------
+[2026-11-17 13:16:21]     Location                : critical element
+[2026-11-17 13:16:21]     Member                  : G5
+[2026-11-17 13:16:21]     Source                  : grillage_analysis
+[2026-11-17 13:16:21]     Mu (factored)           : 1,586.06 kNm
+[2026-11-17 13:16:21]     Vu (factored)           : 206.81 kN
+[2026-11-17 13:16:21]     Nu (factored)           : 20.66 kN
+[2026-11-17 13:16:21]     delta_live              : 7.28 mm
+[2026-11-17 13:16:21]     delta_total             : 18.66 mm
+[2026-11-17 13:16:21]     Stress Range            : 107.74 MPa
+[2026-11-17 13:16:21]     Shear Range             : 24.26 MPa
+[2026-11-17 13:16:21]     Nsc                     : 2,000,000 cycles
+[2026-11-17 13:16:21]     M_sls (service)         : 1,512.99 kNm
+[2026-11-17 13:16:21]     V_sls (service)         : 197.23 kN
+[2026-11-17 13:16:21]   IRC 22:2015 CAPACITY COMPUTATIONS
+[2026-11-17 13:16:21]   ---------------------------------
+[2026-11-17 13:16:21]     1. Effective Width (Cl.603.2.1)
+[2026-11-17 13:16:21]        beff = 1200.0 mm
+[2026-11-17 13:16:21]     2. Section Classification (Cl.603)
+[2026-11-17 13:16:21]        epsilon = 0.8450
+[2026-11-17 13:16:21]        Web: Slender  (d/tw = 162.6)
+[2026-11-17 13:16:21]        Flange: Semi-Compact  (b/tf = 11.4)
+[2026-11-17 13:16:21]        Governing: Slender
+[2026-11-17 13:16:21]     3. Positive Moment Capacity (Cl.603.3.1)
+[2026-11-17 13:16:21]        PNA Location: web
+[2026-11-17 13:16:21]        xu = 411.17 mm
+[2026-11-17 13:16:21]        Mp = Md = 10,765.43 kNm  (γm0 and γc embedded)
+[2026-11-17 13:16:21]     4. Plastic Shear Resistance (Cl.603.3.3.2)
+[2026-11-17 13:16:21]        Av = 16,260 mm²
+[2026-11-17 13:16:21]        Vn = 3,285.70 kN
+[2026-11-17 13:16:21]        Vd = 2,987.00 kN
+[2026-11-17 13:16:21]     4b. Shear Buckling Resistance (Cl.603.3.3.2 — Post-Critical)
+[2026-11-17 13:16:21]        Kv = 6.345  |  λw = 2.158
+[2026-11-17 13:16:21]        τb = 43.38 MPa  |  Vcr = 641.26 kN
+[2026-11-17 13:16:21]     5. Buckling Resistance Moment (Cl.603.3.3.1)
+[2026-11-17 13:16:21]        Mcr = 88,107.80 kNm  |  λ_LT = 0.2992  |  χ_LT = 1.0000
+[2026-11-17 13:16:21]        Mb = 7,986.44 kNm
+[2026-11-17 13:16:21]     6. Bending–Shear Interaction (Cl.603.3.3.3)
+[2026-11-17 13:16:21]        beta = 0.0000  |  Mdv = 10,765.43 kNm
+[2026-11-17 13:16:21]     7. Composite Section Properties (Cl.604.3)
+[2026-11-17 13:16:21]        Short-term (n=7.5):  I = 37,155,444,235 mm⁴  |  y_top = 597.1 mm  |  y_bot = 1322.9 mm
+[2026-11-17 13:16:21]        Long-term  (n=15.0):  I = 31,075,677,024 mm⁴
+[2026-11-17 13:16:21]     8. SLS Stress Limits (Cl.604.3.1)
+[2026-11-17 13:16:21]        Concrete limit   : σc  ≤ 0.48 fck = 19.2 MPa
+[2026-11-17 13:16:21]        Steel equiv. limit: fe  ≤ 0.90 fy  = 315.0 MPa
+[2026-11-17 13:16:21]        Rebar limit      : σr  ≤ 0.80 fyk = 400.0 MPa
+[2026-11-17 13:16:21]        --- Actual stresses (M_sls = 1513.0 kNm) ---
+[2026-11-17 13:16:21]        σc (concrete)  = 3.242 MPa  OK
+[2026-11-17 13:16:21]        fe (steel)     = 57.822 MPa  OK
+[2026-11-17 13:16:21]        σr (rebar)     = 22.033 MPa  OK
+[2026-11-17 13:16:21]        τ (web shear)  = 12.130 MPa
+[2026-11-17 13:16:21]     9. Deflection Limits (Cl.604.3.2)
+[2026-11-17 13:16:21]        Live + impact ≤ L/800 = 37.50 mm
+[2026-11-17 13:16:21]        Total         ≤ L/600 = 50.00 mm
+[2026-11-17 13:16:21]     10. Fatigue Assessment (Cl.605)
+[2026-11-17 13:16:21]        f_fd  = 92.491 MPa  |  τ_fd = 52.493 MPa
+[2026-11-17 13:16:21]     11. Shear Stud Capacity (Cl.606.3.1)
+[2026-11-17 13:16:21]        Qu = 95.363 kN / stud
+[2026-11-17 13:16:21]        Required ULS spacing = 2419.0 mm
+[2026-11-17 13:16:21]     12. Shear Connector Spacing Limits (Cl.606.9)
+[2026-11-17 13:16:21]        Max spacing = min(600, 3t_slab, 4h_stud) = 400 mm
+[2026-11-17 13:16:21]        Min spacing = 75 mm
+[2026-11-17 13:16:21]   DESIGN CHECK RESULTS (DCR = Demand / Capacity)
+[2026-11-17 13:16:21]   ----------------------------------------------
+[2026-11-17 13:16:21]     -------------------------------------------------------------------------
+[2026-11-17 13:16:21]       #  Check                            Demand    Capacity      DCR  Status
+[2026-11-17 13:16:21]     -------------------------------------------------------------------------
+[2026-11-17 13:16:21]       1  ULS Flexure                     1586.06    10765.43    0.147   PASS 
+[2026-11-17 13:16:21]       2  ULS Shear                        206.81     2987.00    0.069   PASS 
+[2026-11-17 13:16:21]       2  ULS Shear Buckling               206.81      641.26    0.323   PASS 
+[2026-11-17 13:16:21]       3  M-V Interaction                 1586.06    10765.43    0.147   PASS 
+[2026-11-17 13:16:21]       4  M-N Interaction                    0.15        1.00    0.149   PASS 
+[2026-11-17 13:16:21]       5  LTB (Girder SW Only)             239.53      900.22    0.266   PASS 
+[2026-11-17 13:16:21]       5  LTB (Construction Stage)         903.68     7986.44    0.113   PASS 
+[2026-11-17 13:16:21]       7  Stud Spacing Feasibility (Cl.606.9)      75.00      400.00    0.188   PASS 
+[2026-11-17 13:16:21]       7  Stud Detailing                     0.00        1.00    0.000   PASS 
+[2026-11-17 13:16:21]       8  Fatigue Normal Stress            107.74       92.49    1.165  *FAIL*
+[2026-11-17 13:16:21]       9  Fatigue Shear Stress              24.26       52.49    0.462   PASS 
+[2026-11-17 13:16:21]      11  SLS Steel Equiv. Stress           57.82      315.00    0.184   PASS 
+[2026-11-17 13:16:21]      13  SLS Deflection (Live)              7.28       37.50    0.194   PASS 
+[2026-11-17 13:16:21]      14  SLS Deflection (Total)            18.66       50.00    0.373   PASS 
+[2026-11-17 13:16:21]      20  Int.Stiff: Leg ≤ H_limit         325.00      169.03    1.923  *FAIL*
+[2026-11-17 13:16:21]      20  Int.Stiff: Iys ≥ Iys_min     1219500.00  239579166.67    0.005   PASS 
+[2026-11-17 13:16:21]      21  Brg.Stiff: Web Buckling          224.10   365040.99    0.001   PASS 
+[2026-11-17 13:16:21]      21  Brg.Stiff: Local Crushing        224.10      329.10    0.681   PASS 
+[2026-11-17 13:16:21]      21  Brg.Stiff: Bearing Contact       224.10     4136.36    0.054   PASS 
+[2026-11-17 13:16:21]      21  Brg.Stiff: Column Buckling       224.10     3340.91    0.067   PASS 
+[2026-11-17 13:16:21]     -------------------------------------------------------------------------
+[2026-11-17 13:16:21]   DCR BAR CHART
+[2026-11-17 13:16:21]   -------------
+[2026-11-17 13:16:21]     ULS Flexure            [||||||.......................................] 0.147
+[2026-11-17 13:16:21]     ULS Shear              [|||..........................................] 0.069
+[2026-11-17 13:16:21]     ULS Shear Buckling     [||||||||||||||...............................] 0.323
+[2026-11-17 13:16:21]     M-V Interaction        [||||||.......................................] 0.147
+[2026-11-17 13:16:21]     M-N Interaction        [||||||.......................................] 0.149
+[2026-11-17 13:16:21]     LTB (Girder SW Only)   [|||||||||||..................................] 0.266
+[2026-11-17 13:16:21]     LTB (Construction Stage) [|||||........................................] 0.113
+[2026-11-17 13:16:21]     Stud Spacing Feasibility (Cl.606.9) [||||||||.....................................] 0.188
+[2026-11-17 13:16:21]     Stud Detailing         [.............................................] 0.000
+[2026-11-17 13:16:21]     Fatigue Normal Stress  [XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX] 1.165
+[2026-11-17 13:16:21]     Fatigue Shear Stress   [||||||||||||||||||||.........................] 0.462
+[2026-11-17 13:16:21]     SLS Steel Equiv. Stress [||||||||.....................................] 0.184
+[2026-11-17 13:16:21]     SLS Deflection (Live)  [||||||||.....................................] 0.194
+[2026-11-17 13:16:21]     SLS Deflection (Total) [||||||||||||||||.............................] 0.373
+[2026-11-17 13:16:21]     Int.Stiff: Leg ≤ H_limit [XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX] 1.923
+[2026-11-17 13:16:21]     Int.Stiff: Iys ≥ Iys_min [.............................................] 0.005
+[2026-11-17 13:16:21]     Brg.Stiff: Web Buckling [.............................................] 0.001
+[2026-11-17 13:16:21]     Brg.Stiff: Local Crushing [||||||||||||||||||||||||||||||...............] 0.681
+[2026-11-17 13:16:21]     Brg.Stiff: Bearing Contact [||...........................................] 0.054
+[2026-11-17 13:16:21]     Brg.Stiff: Column Buckling [|||..........................................] 0.067
+[2026-11-17 13:16:21]   OVERALL VERDICT
+[2026-11-17 13:16:21]   ---------------
+[2026-11-17 13:16:21]     Status           : FAIL
+[2026-11-17 13:16:21]     Checks Run       : 20
+[2026-11-17 13:16:21]     PASS / WARN / FAIL: 13 / 0 / 1
+[2026-11-17 13:16:21]     Maximum DCR      : 1.1649
+[2026-11-17 13:16:21]     Critical Check   : Fatigue Normal Stress (Cl.605)
+[2026-11-17 13:16:21]     >>> DESIGN FAILS ONE OR MORE CHECKS - REVISION REQUIRED <<<
+[2026-11-17 13:16:21]   ============================================================
+[2026-11-17 13:16:21]     PIPELINE COMPLETE -- G5  Overall: FAIL
+[2026-11-17 13:16:21]   ============================================================
+[2026-11-17 13:16:21]   STAGE 5 COMPLETE [78%] : GIRDER DESIGN CHECKS
+[2026-11-17 13:16:21]   STAGE 6 : DECK SLAB DESIGN  [78%]
+[2026-11-17 13:16:21]   ============================================================
+[2026-11-17 13:16:21]     DECK SLAB DESIGN RESULTS
+[2026-11-17 13:16:21]   ============================================================
+[2026-11-17 13:16:21]   IRC 6:2017 Deck Slab Design Summary
+[2026-11-17 13:16:21]   ====================================================
+[2026-11-17 13:16:21]   Governing vehicle      : Class70R(W)
+[2026-11-17 13:16:21]   Impact factor (IF)     : 1.100  [IRC 6:2017 Cl.208]
+[2026-11-17 13:16:21]     (1 + 0.100 for span 30.0 m)
+[2026-11-17 13:16:21]   γ<sub>DL</sub>  [Table B.2]      : 1.35
+[2026-11-17 13:16:21]   γ<sub>LL</sub>  [Table B.2]      : 1.5
+[2026-11-17 13:16:21]   Effective span (S)     : 1.200 m  (girder c/c)
+[2026-11-17 13:16:21]   Deck thickness         : 250 mm
+[2026-11-17 13:16:21]   Concrete               : M40  (f<sub>ck</sub> = 40 MPa, f<sub>ctm</sub> = 3.0 MPa)
+[2026-11-17 13:16:21]   Reinforcement          : Fe 500  (f<sub>y</sub> = 500 MPa)
+[2026-11-17 13:16:21]   Cover Adequacy  [IRC 112:2020 Table 14.2 — 100-yr service life]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     Concrete grade        : M40  → Exposure: Very Severe
+[2026-11-17 13:16:21]     Recommended min cover : 50 mm
+[2026-11-17 13:16:21]     Top cover provided    : 50 mm  → OK
+[2026-11-17 13:16:21]     Bottom cover provided : 50 mm  → OK
+[2026-11-17 13:16:21]   Interior Span Loads
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     Dead load (w<sub>DL</sub>)     : 6.13 kN/m²
+[2026-11-17 13:16:21]     Max wheel load (P)   : 83.4 kN  [IRC 6:2017 Cl.204]
+[2026-11-17 13:16:21]     Cross-bracing spacing : 3.000 m  (b/l<sub>o</sub> = 2.50)
+[2026-11-17 13:16:21]     Effective width b<sub>e</sub> : 1.180 m  [IRC 112:2020 Eq. B3.1, α<sub>e</sub> = 2.60]
+[2026-11-17 13:16:21]   Interior Span Design Moments
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     M<sub>DL</sub>                : 0.883 kNm/m
+[2026-11-17 13:16:21]     M<sub>LL</sub> (unfactored)    : 21.200 kNm/m
+[2026-11-17 13:16:21]     M<sub>ULS</sub> (sagging)      : 36.171 kNm/m
+[2026-11-17 13:16:21]     M<sub>ULS</sub> (hogging, 75%) : 27.128 kNm/m
+[2026-11-17 13:16:21]   Bottom (Sagging) Reinforcement
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     Effective depth d    : 194.0 mm
+[2026-11-17 13:16:21]     A<sub>s</sub> required          : 465 mm²/m
+[2026-11-17 13:16:21]     Provided             : Ø12 @ 85 mm c/c  →  1331 mm²/m
+[2026-11-17 13:16:21]     Moment capacity M<sub>u</sub>  : 102.515 kNm/m
+[2026-11-17 13:16:21]     Status               : PASS
+[2026-11-17 13:16:21]   Top (Hogging) Reinforcement
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     Effective depth d    : 194.0 mm
+[2026-11-17 13:16:21]     A<sub>s</sub> required          : 488 mm²/m
+[2026-11-17 13:16:21]     Provided             : Ø12 @ 230 mm c/c  →  492 mm²/m
+[2026-11-17 13:16:21]     Moment capacity M<sub>u</sub>   : 40.162 kNm/m
+[2026-11-17 13:16:21]     Status               : PASS
+[2026-11-17 13:16:21]   Longitudinal (Distribution) Reinforcement  [IRC 112:2020 Cl.16.6.1]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     20% of A<sub>s</sub>bot        : 266 mm²/m
+[2026-11-17 13:16:21]     As required          : 303 mm²/m
+[2026-11-17 13:16:21]     Provided             : Ø12 @ 300 mm c/c  →  377 mm²/m
+[2026-11-17 13:16:21]   Deck Overhang Design
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     Overhang length L<sub>oh</sub> : 600 mm  (0.600 m)
+[2026-11-17 13:16:21]     Edge clearance f      : 0.150 m  [IRC 6:2017 Table 3]
+[2026-11-17 13:16:21]     Railing DL load       : 1.472 kN/m  [IRC 6:2017 Cl.206.5]
+[2026-11-17 13:16:21]     Crash barrier moment  : 7.50 kNm/m  [IRC 6:2017 Cl.206.4]
+[2026-11-17 13:16:21]     Wheel arm from root   : 0.450 m
+[2026-11-17 13:16:21]     M<sub>DL</sub> (overhang)       : 1.987 kNm/m  (slab 1.104 + railing 0.883)
+[2026-11-17 13:16:21]     M<sub>LL</sub> (overhang)       : 39.918 kNm/m
+[2026-11-17 13:16:21]     M<sub>ULS</sub> (overhang)      : 79.797 kNm/m
+[2026-11-17 13:16:21]   Overhang Top Reinforcement
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     Effective depth d     : 192.0 mm
+[2026-11-17 13:16:21]     As required           : 1070 mm²/m
+[2026-11-17 13:16:21]     Provided              : Ø16 @ 75 mm c/c  →  2681 mm²/m
+[2026-11-17 13:16:21]     Moment capacity M<sub>u</sub>    : 184.238 kNm/m
+[2026-11-17 13:16:21]     Status                : PASS
+[2026-11-17 13:16:21]   ====================================================
+[2026-11-17 13:16:21]   Shear Checks  (IRC 112:2020)
+[2026-11-17 13:16:21]   ====================================================
+[2026-11-17 13:16:21]   One-Way Shear — Interior Span  [Cl.10.3.2]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     V<sub>DL</sub> at support         : 3.679 kN/m
+[2026-11-17 13:16:21]     V<sub>LL</sub> at support         : 70.665 kN/m
+[2026-11-17 13:16:21]     V<sub>ULS</sub>          : 121.564 kN/m
+[2026-11-17 13:16:21]     V<sub>RD</sub>,c (no links)        : 129.024 kN/m  → PASS
+[2026-11-17 13:16:21]   Punching Shear — Interior Span  [Cl.10.4]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     Effective contact c1    : 400 mm  (transverse, incl. WC dispersion)
+[2026-11-17 13:16:21]     Effective contact c2    : 250 mm  (longitudinal, incl. WC dispersion)
+[2026-11-17 13:16:21]     Control perimeter u1    : 3738 mm  (at 2d = 388 mm)
+[2026-11-17 13:16:21]     v<sub>ED</sub>                    : 0.1897 MPa
+[2026-11-17 13:16:21]     v<sub>RD</sub>,c                   : 0.6651 MPa  → PASS
+[2026-11-17 13:16:21]   Shear Check — Overhang  [IRC 112:2020 Cl.10.3.2]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     V<sub>ULS</sub> (one-way) at root : 153.320 kN/m
+[2026-11-17 13:16:21]     V<sub>RD</sub>,c (no links)        : 161.455 kN/m  → PASS
+[2026-11-17 13:16:21]   Punching Shear — Overhang  [IRC 112:2020 Cl.10.4]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     Control perimeter u1    : 3713 mm  (at 2d = 384 mm)
+[2026-11-17 13:16:21]     v<sub>ED</sub>                    : 0.1930 MPa
+[2026-11-17 13:16:21]     v<sub>RD</sub>,c                   : 0.8409 MPa  → PASS
+[2026-11-17 13:16:21]   ====================================================
+[2026-11-17 13:16:21]   SLS Checks  (IRC 112:2020)
+[2026-11-17 13:16:21]   ====================================================
+[2026-11-17 13:16:21]   Stress Check — Bottom (Sagging)  [Cl.12.2.1]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     M<sub>SLS</sub>,char (sagging)  : 24.202 kNm/m  (γ<sub>DL</sub>=1.0, γ<sub>LL</sub>=1.0)
+[2026-11-17 13:16:21]     Neutral axis depth x  : 191.7 mm
+[2026-11-17 13:16:21]     Concrete σ<sub>c</sub>         : 1.94 MPa  ≤ 19.2 MPa  → PASS
+[2026-11-17 13:16:21]     Steel σ<sub>s</sub>            : 139.82 MPa  ≤ 400.0 MPa  → PASS
+[2026-11-17 13:16:21]   Stress Check — Top (Hogging)  [Cl.12.2.1]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     M<sub>SLS</sub>,char (hogging)  : 18.152 kNm/m  (γ<sub>DL</sub>=1.0, γ<sub>LL</sub>=1.0)
+[2026-11-17 13:16:21]     Concrete σ<sub>c</sub>           : 1.47 MPa  ≤ 19.2 MPa  → PASS
+[2026-11-17 13:16:21]     Steel σ<sub>s</sub>              : 281.12 MPa  ≤ 400.0 MPa  → PASS
+[2026-11-17 13:16:21]   Crack Width Check — Bottom (Sagging)  [Cl.12.3.4]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     M<sub>SLS</sub>,freq (sagging)  : 18.373 kNm/m  (γ<sub>DL</sub>=1.0, γ<sub>LL</sub>=0.75)
+[2026-11-17 13:16:21]     Steel stress σ<sub>s</sub>       : 106.14 MPa
+[2026-11-17 13:16:21]     ρ<sub>p,eff</sub>               : 0.06849
+[2026-11-17 13:16:21]     Crack spacing S<sub>r,max</sub>  : 199.8 mm
+[2026-11-17 13:16:21]     Strain diff ε<sub>sm</sub>−ε<sub>cm</sub>  : 3.184e-04
+[2026-11-17 13:16:21]     Crack width w<sub>k</sub>      : 0.0636 mm  ≤ 0.3 mm  → PASS
+[2026-11-17 13:16:21]   Crack Width Check — Top (Hogging)  [Cl.12.3.4]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     M<sub>SLS</sub>,freq (hogging)  : 13.779 kNm/m  (γ<sub>DL</sub>=1.0, γ<sub>LL</sub>=0.75)
+[2026-11-17 13:16:21]     Steel stress σ<sub>s</sub>       : 213.40 MPa
+[2026-11-17 13:16:21]     ρ<sub>p,eff</sub>              : 0.02382
+[2026-11-17 13:16:21]     Crack spacing S<sub>r,max</sub>   : 255.6 mm
+[2026-11-17 13:16:21]     Strain diff ε<sub>sm</sub>−ε<sub>cm</sub>  : 6.402e-04
+[2026-11-17 13:16:21]     Crack width w<sub>k</sub>      : 0.1637 mm  ≤ 0.3 mm  → PASS
+[2026-11-17 13:16:21]   Overhang SLS Stress Check  [IRC 112:2020 Cl.12.2.1]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     M<sub>SLS</sub>,char (overhang) : 53.397 kNm/m  (γ_DL=1.0, γ_LL=1.0)
+[2026-11-17 13:16:21]     Concrete σ<sub>c</sub>          : 4.36 MPa  ≤ 19.2 MPa  → PASS
+[2026-11-17 13:16:21]     Steel σ<sub>s</sub>              : 155.16 MPa  ≤ 400.0 MPa  → PASS
+[2026-11-17 13:16:21]   Overhang Crack Width Check  [IRC 112:2020 Cl.12.3.4]
+[2026-11-17 13:16:21]   ----------------------------------------
+[2026-11-17 13:16:21]     M<sub>SLS</sub>,freq (overhang) : 40.544 kNm/m  (γ_DL=1.0, γ_LL=0.75)
+[2026-11-17 13:16:21]     Steel stress σ<sub>s</sub>      : 117.81 MPa
+[2026-11-17 13:16:21]     ρ<sub>p,eff</sub>                : 0.13603
+[2026-11-17 13:16:21]     Crack spacing S<sub>r,max</sub> : 190.0 mm
+[2026-11-17 13:16:21]     Strain diff ε<sub>sm</sub> − ε<sub>cm</sub>  : 3.534e-04
+[2026-11-17 13:16:21]     Crack width w<sub>k</sub>       : 0.0672 mm  ≤ 0.3 mm  → PASS
+[2026-11-17 13:16:21]   ============================================================
+[2026-11-17 13:16:21]   STAGE 6 COMPLETE [85%] : DECK SLAB DESIGN
+[2026-11-17 13:16:21]   STAGE 7 : TRANSVERSE MEMBER DESIGN  [85%]
+[2026-11-17 13:16:21]   ======================================================================
+[2026-11-17 13:16:21]                     CROSS BRACING CONFIGURATION & GEOMETRY
+[2026-11-17 13:16:21]   ======================================================================
+[2026-11-17 13:16:21]     Brace type               : X-type
+[2026-11-17 13:16:21]     Top chord                : Yes
+[2026-11-17 13:16:21]     Bottom chord             : Yes
+[2026-11-17 13:16:21]   ----------------------------------------------------------------------
+[2026-11-17 13:16:21]     Girder spacing (s)       : 1.2000 m
+[2026-11-17 13:16:21]     Girder depth (D)         : 1.6700 m
+[2026-11-17 13:16:21]     Brace clear height (h)   : 1.4195 m  (depth_ratio = 0.85)
+[2026-11-17 13:16:21]     Diagonal length          : 1.8588 m
+[2026-11-17 13:16:21]     Diagonal angle (alpha)   : 49.79 deg from horizontal
+[2026-11-17 13:16:21]     Panel spacing            : 3.000 m
+[2026-11-17 13:16:21]   ======================================================================
+[2026-11-17 13:16:21]   ===============================================================================================
+[2026-11-17 13:16:21]                         CROSS BRACING — CRITICAL DESIGN FORCES
+[2026-11-17 13:16:21]   ===============================================================================================
+[2026-11-17 13:16:21]   Girder Pair Type  F_diag (kN)  F_chord (kN)     Gov LC
+[2026-11-17 13:16:21]         G1-G2    T       10.797         6.971 1.5 EQ (a)
+[2026-11-17 13:16:21]         G1-G2    C       -7.907        -5.105 1.5 EQ (b)
+[2026-11-17 13:16:21]         G2-G3    T        8.135         5.252 1.5 EQ (a)
+[2026-11-17 13:16:21]         G2-G3    C       -4.947        -3.194 1.5 EQ (b)
+[2026-11-17 13:16:21]         G3-G4    T        8.522         5.502 1.5 EQ (a)
+[2026-11-17 13:16:21]         G3-G4    C       -1.792        -1.157 1.5 EQ (b)
+[2026-11-17 13:16:21]         G4-G5    T        9.191         5.934 1.5 EQ (a)
+[2026-11-17 13:16:21]         G4-G5    C       -0.762        -0.492 1.5 EQ (b)
+[2026-11-17 13:16:21]         G5-G6    T       10.207         6.590 1.5 EQ (a)
+[2026-11-17 13:16:21]         G5-G6    C       -2.173        -1.403 1.5 EQ (b)
+[2026-11-17 13:16:21]         G6-G7    T       11.880         7.670 1.5 EQ (a)
+[2026-11-17 13:16:21]         G6-G7    C       -2.702        -1.744       EQ_Z
+[2026-11-17 13:16:21]   ===============================================================================================
+[2026-11-17 13:16:21]   ------------------------------------------------------------
+[2026-11-17 13:16:21]     CROSS BRACING DESIGNS  (6 pair(s))  diag L=1859 mm  chord L=1200 mm
+[2026-11-17 13:16:21]   ------------------------------------------------------------
+[2026-11-17 13:16:27]     Total time : 5.650s  |  24 designs
+[2026-11-17 13:16:27]   ------------------------------------------------------------
+[2026-11-17 13:16:27]   ===========================================================================
+[2026-11-17 13:16:27]                      CROSS BRACING — OSDAG DESIGN RESULTS                    
+[2026-11-17 13:16:27]   ===========================================================================
+[2026-11-17 13:16:27]     Pair : G1-G2
+[2026-11-17 13:16:27]       Diagonal [    Tension    10.797 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.24  λ=151.1  Bolted
+[2026-11-17 13:16:27]       Diagonal [Compression     7.907 kN]  →  40 x 40 x 3   cap=25.92 kN  eff=0.73  λ=98.2  Bolted
+[2026-11-17 13:16:27]       Chord    [    Tension     6.971 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.15  λ=97.6  Bolted
+[2026-11-17 13:16:27]       Chord    [Compression     5.105 kN]  →  40 x 40 x 3   cap=38.58 kN  eff=0.47  λ=63.4  Bolted
+[2026-11-17 13:16:27]     Pair : G2-G3
+[2026-11-17 13:16:27]       Diagonal [    Tension     8.135 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.18  λ=151.1  Bolted
+[2026-11-17 13:16:27]       Diagonal [Compression     4.947 kN]  →  40 x 40 x 3   cap=25.92 kN  eff=0.46  λ=98.2  Bolted
+[2026-11-17 13:16:27]       Chord    [    Tension     5.252 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.12  λ=97.6  Bolted
+[2026-11-17 13:16:27]       Chord    [Compression     3.194 kN]  →  40 x 40 x 3   cap=38.58 kN  eff=0.29  λ=63.4  Bolted
+[2026-11-17 13:16:27]     Pair : G3-G4
+[2026-11-17 13:16:27]       Diagonal [    Tension     8.522 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.19  λ=151.1  Bolted
+[2026-11-17 13:16:27]       Diagonal [Compression     1.792 kN]  →  40 x 40 x 3   cap=25.92 kN  eff=0.16  λ=98.2  Bolted
+[2026-11-17 13:16:27]       Chord    [    Tension     5.502 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.12  λ=97.6  Bolted
+[2026-11-17 13:16:27]       Chord    [Compression     1.157 kN]  →  40 x 40 x 3   cap=38.58 kN  eff=0.11  λ=63.4  Bolted
+[2026-11-17 13:16:27]     Pair : G4-G5
+[2026-11-17 13:16:27]       Diagonal [    Tension     9.191 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.20  λ=151.1  Bolted
+[2026-11-17 13:16:27]       Diagonal [Compression     0.762 kN]  →  40 x 40 x 3   cap=25.92 kN  eff=0.07  λ=98.2  Bolted
+[2026-11-17 13:16:27]       Chord    [    Tension     5.934 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.13  λ=97.6  Bolted
+[2026-11-17 13:16:27]       Chord    [Compression     0.492 kN]  →  40 x 40 x 3   cap=38.58 kN  eff=0.05  λ=63.4  Bolted
+[2026-11-17 13:16:27]     Pair : G5-G6
+[2026-11-17 13:16:27]       Diagonal [    Tension    10.207 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.23  λ=151.1  Bolted
+[2026-11-17 13:16:27]       Diagonal [Compression     2.173 kN]  →  40 x 40 x 3   cap=25.92 kN  eff=0.20  λ=98.2  Bolted
+[2026-11-17 13:16:27]       Chord    [    Tension     6.590 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.15  λ=97.6  Bolted
+[2026-11-17 13:16:27]       Chord    [Compression     1.403 kN]  →  40 x 40 x 3   cap=38.58 kN  eff=0.13  λ=63.4  Bolted
+[2026-11-17 13:16:27]     Pair : G6-G7
+[2026-11-17 13:16:27]       Diagonal [    Tension    11.880 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.26  λ=151.1  Bolted
+[2026-11-17 13:16:27]       Diagonal [Compression     2.702 kN]  →  40 x 40 x 3   cap=25.92 kN  eff=0.25  λ=98.2  Bolted
+[2026-11-17 13:16:27]       Chord    [    Tension     7.670 kN]  →  40 x 40 x 3   cap=45.0 kN  eff=0.17  λ=97.6  Bolted
+[2026-11-17 13:16:27]       Chord    [Compression     1.744 kN]  →  40 x 40 x 3   cap=38.58 kN  eff=0.16  λ=63.4  Bolted
+[2026-11-17 13:16:27]   ===========================================================================
+[2026-11-17 13:16:27]   ===========================================================================
+[2026-11-17 13:16:27]                      END DIAPHRAGM — OSDAG DESIGN RESULTS                    
+[2026-11-17 13:16:27]   ===========================================================================
+[2026-11-17 13:16:27]     Pair : G1-G2
+[2026-11-17 13:16:27]     Pair : G2-G3
+[2026-11-17 13:16:27]     Pair : G3-G4
+[2026-11-17 13:16:27]     Pair : G4-G5
+[2026-11-17 13:16:27]     Pair : G5-G6
+[2026-11-17 13:16:27]     Pair : G6-G7
+[2026-11-17 13:16:27]   ===========================================================================
+[2026-11-17 13:16:27]   STAGE 7 COMPLETE [92%] : TRANSVERSE MEMBER DESIGN
+[2026-11-17 13:16:34]   STAGE 8 : 3D CAD & DRAWING GENERATION  [92%]
+[2026-11-17 13:16:34]   DEBUG railing raw: IRC 5 - RCC Railing
+[2026-11-17 13:16:34]   DEBUG railing resolved: IRC 5 RCC railing
+[2026-11-17 13:16:34]   DEBUG girder spacing input m: 1.2
+[2026-11-17 13:16:34]   DEBUG girder spacing dto mm: 1200.0
+[2026-11-17 13:16:34]   DEBUG stiffeners | mode=Optimized | intermediate_on=True spacing=3260.0 thick=10.0 outstand=325.0 | longitudinal_on=False count=1 thick=8.0 | bearing_pairs=4 thick=10.0 outstand=325.0
+[2026-11-17 13:16:34]   DEBUG stiffeners raw keys | intermediate='Yes' longitudinal='No'
+[2026-11-17 13:16:34]     CAD parameters prepared; geometry is built by the viewer at render time.
+[2026-11-17 13:16:34]   STAGE 8 COMPLETE [100%] : 3D CAD & DRAWING GENERATION
+[2026-11-17 13:16:34] --------------------------------------------- A N A L Y S I S   C O M P L E T E
+[2026-11-17 13:16:34]   TOTAL SOLUTION TIME .. : 55.86 [SEC]
+[2026-11-17 13:16:34] ============================================================

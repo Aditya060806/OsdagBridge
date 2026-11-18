@@ -1,0 +1,12 @@
+[
+ {
+  "title": "Input Error",
+  "text": "Weight Density must be between 50.0 and 120.0 kN/m\u00b3.",
+  "info": ""
+ },
+ {
+  "title": "Input Error",
+  "text": "Yield Strength, Fy must be between 100.0 and 1200.0 MPa.",
+  "info": ""
+ }
+]

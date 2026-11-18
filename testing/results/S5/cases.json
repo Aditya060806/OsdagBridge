@@ -1,0 +1,36 @@
+{
+ "title": "Control: girder layout when the deck width changes between runs",
+ "location": [
+  "Gujarat",
+  "Ahmedabad"
+ ],
+ "cases": [
+  {
+   "id": "TC17",
+   "title": "Fresh session with the TC03 inputs (wide deck: 11 m each way, median, footpaths both sides, span 40, skew -12)",
+   "text": {
+    "geometry.span": 40,
+    "geometry.carriageway_width": 11,
+    "geometry.skew_angle": -12
+   },
+   "combo": {
+    "geometry.include_median": "Yes",
+    "geometry.footpath": "Both Sides"
+   }
+  },
+  {
+   "id": "TC18",
+   "title": "Unlock: narrow deck with the TC01 inputs (7.5 m, no median/footpath, span 30)",
+   "unlock": true,
+   "text": {
+    "geometry.span": 30,
+    "geometry.carriageway_width": 7.5,
+    "geometry.skew_angle": 0
+   },
+   "combo": {
+    "geometry.include_median": "No",
+    "geometry.footpath": "None"
+   }
+  }
+ ]
+}

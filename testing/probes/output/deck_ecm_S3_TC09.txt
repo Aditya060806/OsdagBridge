@@ -1,0 +1,46 @@
+﻿
+concrete M40: fck=40.0 MPa, fctm=3.0 MPa, Ecm passed = 33.0 
+ (DB/DTO unit: GPa)
+rebar Fe 500: fy=500.0 MPa, Es=200000.0 MPa  ->  alpha_e = 
+Es/Ecm = 6060.6 (with Ecm in MPa: 6.06)
+
+deck_design_results key               as designed (Ecm GPa) 
+  Ecm in MPa
+rebar_bottom_dia                                         12 
+          12
+rebar_bottom_spacing                                    155 
+         165
+rebar_bottom_area                                       730 
+         685
+rebar_top_spacing                                       195 
+         205
+rebar_top_area                                          580 
+         552
+rebar_overhang_spacing                                  115 
+         115
+rebar_overhang_area                                    1748 
+        1748
+deckdesign.stress.concrete.bottom                     2.993 
+      11.037
+deckdesign.stress.concrete.top                        2.515 
+       9.905
+deckdesign.stress.reinf.bottom                       369.83 
+     283.118
+deckdesign.stress.reinf.top                         368.348 
+     277.656
+deckdesign.crack.wk.bottom                           0.1569 
+       0.217
+deckdesign.crack.wk.top                              0.2062 
+      0.2684
+ur_bot_sls_c                                          0.156 
+       0.575
+ur_bot_sls_s                                          0.925 
+       0.708
+ur_bot_crack                                          0.523 
+       0.723
+bottom mat, GPa value (as run): alpha_e=  6060.61  x= 180.3 
+mm  d=184.0 mm  x/d=0.980
+bottom mat, MPa value         : alpha_e=     6.06  x=  36.2 
+mm  d=184.0 mm  x/d=0.197
+
+

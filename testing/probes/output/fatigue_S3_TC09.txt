@@ -1,0 +1,34 @@
+﻿
+SLS frequent cases: 6   controlling girder: G3
+girder   max Mz_i   min Mz_i   max Mz_j   min Mz_j  
+designer range  max |M| per LC  ratio   (kN.m)
+G1         2936.2        0.0       -0.0    -2936.2          
+5872.3          2936.2  2.000
+       check 8: stress range 126.15 MPa / f_fd 86.96 MPa = 
+UR 1.451   with internal sign: 63.07 MPa, UR 0.725
+G2         2935.2       -0.0        0.0    -2935.2          
+5870.4          2935.2  2.000
+       check 8: stress range 126.11 MPa / f_fd 86.96 MPa = 
+UR 1.450   with internal sign: 63.05 MPa, UR 0.725
+G3         2968.6        0.0       -0.0    -2968.6          
+5937.2          2968.6  2.000
+       check 8: stress range 127.54 MPa / f_fd 86.96 MPa = 
+UR 1.467   with internal sign: 63.77 MPa, UR 0.733
+G4         2968.6        0.0       -0.0    -2968.6          
+5937.2          2968.6  2.000
+       check 8: stress range 127.54 MPa / f_fd 86.96 MPa = 
+UR 1.467   with internal sign: 63.77 MPa, UR 0.733
+G5         2935.2       -0.0        0.0    -2935.2          
+5870.4          2935.2  2.000
+       check 8: stress range 126.11 MPa / f_fd 86.96 MPa = 
+UR 1.450   with internal sign: 63.05 MPa, UR 0.725
+G6         2936.2        0.0       -0.0    -2936.2          
+5872.3          2936.2  2.000
+       check 8: stress range 126.15 MPa / f_fd 86.96 MPa = 
+UR 1.451   with internal sign: 63.07 MPa, UR 0.725
+
+output_dict util.fatigue (report)        = 146.67 %
+Output Dock / Design Check 'Envelope'     = 72.53 %
+ratio                                     = 2.022
+
+

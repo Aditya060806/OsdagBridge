@@ -1,0 +1,14 @@
+﻿
+SLS frequent cases: 6   controlling girder: G1
+girder   max Mz_i   min Mz_i   max Mz_j   min Mz_j  
+designer range  max |M| per LC  ratio   (kN.m)
+G1         1048.5       -7.8        7.8    -1048.5          
+2096.9          1048.5  2.000
+       check 8: stress range 195.98 MPa / f_fd 92.49 MPa = 
+UR 2.119   with internal sign: 98.72 MPa, UR 1.067
+
+output_dict util.fatigue (report)        = 211.89 %
+Output Dock / Design Check 'Envelope'     = 105.94 %
+ratio                                     = 2.000
+
+

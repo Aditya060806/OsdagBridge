@@ -1,0 +1,40 @@
+{
+ "additional": {
+  "member_properties.girder_details.section_input.symmetry": "Girder Unsymmetric",
+  "member_properties.girder_details.section_input.depth": 1800,
+  "member_properties.girder_details.section_input.top_flange_width": 450,
+  "member_properties.girder_details.section_input.top_flange_thickness": "25",
+  "member_properties.girder_details.section_input.bottom_flange_width": 550,
+  "member_properties.girder_details.section_input.bottom_flange_thickness": 32,
+  "member_properties.girder_details.section_input.web_thickness": 14,
+  "member_properties.stiffener_details.intermediate_stiffener": "Yes",
+  "member_properties.stiffener_details.intermediate_stiffener_spacing": 1800,
+  "member_properties.stiffener_details.intermediate_stiffener_thickness": 12,
+  "member_properties.stiffener_details.intermediate_stiffener_outstand": 150,
+  "member_properties.stiffener_details.bearing_stiffener_plate_thickness": 16,
+  "member_properties.stiffener_details.bearing_stiffener_outstand": 200,
+  "typical_section.deck_thickness": 230,
+  "typical_section.wearing_course.thickness": 65,
+  "design_options.shear_studs.diameter": 22,
+  "design_options.shear_studs.height": 120,
+  "design_options.deck.bottom_clear_cover": 40
+ },
+ "design": {
+  "started": true,
+  "seconds": 73.9,
+  "locked_after": true,
+  "popups": []
+ },
+ "report": {
+  "pdf": "D:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S3\\TC09\\report\\TC09_report.pdf",
+  "exists": true,
+  "seconds": 9.2,
+  "popups": [
+   {
+    "title": "Report Generated Successfully",
+    "text": "PDF report saved to:\nD:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S3\\TC09\\report\\TC09_report.pdf",
+    "info": "TeX source: D:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S3\\TC09\\report\\TC09_report.tex"
+   }
+  ]
+ }
+}

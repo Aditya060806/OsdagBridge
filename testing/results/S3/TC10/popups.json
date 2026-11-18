@@ -1,0 +1,17 @@
+[
+ {
+  "title": "Report Generated Successfully",
+  "text": "PDF report saved to:\nD:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S3\\TC09\\report\\TC09_report.pdf",
+  "info": "TeX source: D:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S3\\TC09\\report\\TC09_report.tex"
+ },
+ {
+  "title": "Clear Results",
+  "text": "Unlocking will delete all results and plots.",
+  "info": "Do you want to continue?"
+ },
+ {
+  "title": "Saved",
+  "text": "Inputs saved successfully.",
+  "info": ""
+ }
+]

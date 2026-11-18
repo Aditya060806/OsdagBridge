@@ -1,0 +1,17 @@
+[
+ {
+  "title": "Input Error",
+  "text": "Minimum carriageway width required is 4.25 m as per IRC 5:2015 Clause 104.3.1.",
+  "info": ""
+ },
+ {
+  "title": "Input Error",
+  "text": "Carriageway width exceeds 23.6 m (software limitation).",
+  "info": ""
+ },
+ {
+  "title": "Input Error",
+  "text": "Minimum carriageway width required is 7.50 m as per IRC 5:2015 Clause 104.3.1.",
+  "info": ""
+ }
+]

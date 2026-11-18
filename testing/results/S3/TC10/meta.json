@@ -1,0 +1,13 @@
+{
+ "additional": {
+  "member_properties.girder_details.section_input.depth": 1600,
+  "typical_section.deck_thickness": 260,
+  "member_properties.stiffener_details.intermediate_stiffener_spacing": 1500
+ },
+ "design": {
+  "started": true,
+  "seconds": 76.2,
+  "locked_after": true,
+  "popups": []
+ }
+}

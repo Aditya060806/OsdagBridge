@@ -1,0 +1,90 @@
+{
+ "G1": {
+  "dock": {
+   "util.flexure": "34%",
+   "util.shear": "42%",
+   "util.interaction": "35%",
+   "util.ltb": "25%",
+   "util.long_trans_shear": "21%",
+   "util.fatigue": "106%",
+   "util.stress_limitation": "47%",
+   "util.deflection_crack": "62%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 33.72,
+   "util.shear": 41.79,
+   "util.interaction": 34.68,
+   "util.ltb": 24.83,
+   "util.long_trans_shear": 21.01,
+   "util.fatigue": 105.93999999999998,
+   "util.stress_limitation": 46.67,
+   "util.deflection_crack": 62.0
+  }
+ },
+ "G2": {
+  "dock": {
+   "util.flexure": "34%",
+   "util.shear": "42%",
+   "util.interaction": "35%",
+   "util.ltb": "25%",
+   "util.long_trans_shear": "21%",
+   "util.fatigue": "106%",
+   "util.stress_limitation": "47%",
+   "util.deflection_crack": "62%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 33.72,
+   "util.shear": 41.79,
+   "util.interaction": 34.68,
+   "util.ltb": 24.83,
+   "util.long_trans_shear": 21.01,
+   "util.fatigue": 105.93999999999998,
+   "util.stress_limitation": 46.67,
+   "util.deflection_crack": 62.0
+  }
+ },
+ "G3": {
+  "dock": {
+   "util.flexure": "34%",
+   "util.shear": "42%",
+   "util.interaction": "35%",
+   "util.ltb": "25%",
+   "util.long_trans_shear": "21%",
+   "util.fatigue": "106%",
+   "util.stress_limitation": "47%",
+   "util.deflection_crack": "62%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 33.72,
+   "util.shear": 41.79,
+   "util.interaction": 34.68,
+   "util.ltb": 24.83,
+   "util.long_trans_shear": 21.01,
+   "util.fatigue": 105.93999999999998,
+   "util.stress_limitation": 46.67,
+   "util.deflection_crack": 62.0
+  }
+ },
+ "G4": {
+  "dock": {
+   "util.flexure": "34%",
+   "util.shear": "42%",
+   "util.interaction": "35%",
+   "util.ltb": "25%",
+   "util.long_trans_shear": "21%",
+   "util.fatigue": "106%",
+   "util.stress_limitation": "47%",
+   "util.deflection_crack": "62%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 33.72,
+   "util.shear": 41.79,
+   "util.interaction": 34.68,
+   "util.ltb": 24.83,
+   "util.long_trans_shear": 21.01,
+   "util.fatigue": 105.93999999999998,
+   "util.stress_limitation": 46.67,
+   "util.deflection_crack": 62.0
+  }
+ }
+}

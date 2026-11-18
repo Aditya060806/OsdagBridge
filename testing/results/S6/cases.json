@@ -1,0 +1,35 @@
+{
+ "title": "Control: girder count seeded on a wide deck, then the deck is narrowed",
+ "location": [
+  "Gujarat",
+  "Ahmedabad"
+ ],
+ "cases": [
+  {
+   "id": "TC19",
+   "title": "Median and both footpaths selected first, then span 40, carriageway 11",
+   "first_combo": {
+    "geometry.include_median": "Yes",
+    "geometry.footpath": "Both Sides"
+   },
+   "text": {
+    "geometry.span": 40,
+    "geometry.carriageway_width": 11,
+    "geometry.skew_angle": 0
+   }
+  },
+  {
+   "id": "TC20",
+   "title": "Unlock: narrow deck (7.5 m, no median/footpath, span 30) and Design",
+   "unlock": true,
+   "text": {
+    "geometry.span": 30,
+    "geometry.carriageway_width": 7.5
+   },
+   "combo": {
+    "geometry.include_median": "No",
+    "geometry.footpath": "None"
+   }
+  }
+ ]
+}

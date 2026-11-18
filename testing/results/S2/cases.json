@@ -1,0 +1,95 @@
+{
+ "title": "Custom materials for girder, cross bracing, end diaphragm and deck, 4 consecutive runs",
+ "location": [
+  "Tamil Nadu",
+  "Chennai (Minambakkam) (A)"
+ ],
+ "cases": [
+  {
+   "id": "TC05",
+   "title": "Custom steel for all three steel members + custom deck concrete",
+   "text": {
+    "geometry.span": 25,
+    "geometry.carriageway_width": 7.5,
+    "geometry.skew_angle": 5
+   },
+   "material": {
+    "material.girder": {
+     "material.girder.density": 78.5,
+     "material.girder.fy": 345,
+     "material.girder.fu": 480,
+     "material.girder.e": 205,
+     "material.girder.poisson": 0.3,
+     "material.girder.thermal": 12.0
+    },
+    "material.cross_bracing": {
+     "material.girder.density": 77.0,
+     "material.girder.fy": 260,
+     "material.girder.fu": 410,
+     "material.girder.e": 200,
+     "material.girder.poisson": 0.3,
+     "material.girder.thermal": 11.7
+    },
+    "material.end_diaphragm": {
+     "material.girder.density": 76.9,
+     "material.girder.fy": 300,
+     "material.girder.fu": 440,
+     "material.girder.e": 200,
+     "material.girder.poisson": 0.3,
+     "material.girder.thermal": 11.7
+    },
+    "material.deck": {
+     "material.deck.density": 25.5,
+     "material.deck.fck": 42,
+     "material.deck.fctm": 3.2,
+     "material.deck.ecm": 33.5,
+     "material.deck.thermal": 10.5
+    }
+   }
+  },
+  {
+   "id": "TC06",
+   "title": "Unlock: new custom girder steel (410/540, E 210), deck back to M35",
+   "unlock": true,
+   "material": {
+    "material.girder": {
+     "material.girder.density": 80.0,
+     "material.girder.fy": 410,
+     "material.girder.fu": 540,
+     "material.girder.e": 210,
+     "material.girder.poisson": 0.3,
+     "material.girder.thermal": 12.0
+    }
+   },
+   "combo": {
+    "material.deck": "M35"
+   }
+  },
+  {
+   "id": "TC07",
+   "title": "Unlock: girder from custom back to database grade E 350A",
+   "unlock": true,
+   "combo": {
+    "material.girder": "E 350A"
+   }
+  },
+  {
+   "id": "TC08",
+   "title": "Unlock: re-select custom_steel_410_540 for girder; new cross-bracing custom steel with the same Fy/Fu but E 200, density 77",
+   "unlock": true,
+   "combo": {
+    "material.girder": "custom_steel_410_540"
+   },
+   "material": {
+    "material.cross_bracing": {
+     "material.girder.density": 77.0,
+     "material.girder.fy": 410,
+     "material.girder.fu": 540,
+     "material.girder.e": 200,
+     "material.girder.poisson": 0.3,
+     "material.girder.thermal": 11.7
+    }
+   }
+  }
+ ]
+}

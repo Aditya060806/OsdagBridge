@@ -1,0 +1,14 @@
+{
+ "probe": [
+  {
+   "key": "geometry.skew_angle",
+   "typed": 20,
+   "shown": "15.0"
+  },
+  {
+   "key": "geometry.skew_angle",
+   "typed": -20,
+   "shown": "-15.0"
+  }
+ ]
+}

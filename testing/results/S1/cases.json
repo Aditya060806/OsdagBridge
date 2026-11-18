@@ -1,0 +1,62 @@
+{
+ "title": "Basic geometry sweep with database grades, 4 consecutive runs",
+ "location": [
+  "Gujarat",
+  "Ahmedabad"
+ ],
+ "cases": [
+  {
+   "id": "TC01",
+   "title": "Baseline: 30 m span, 7.5 m carriageway, defaults",
+   "text": {
+    "geometry.span": 30,
+    "geometry.carriageway_width": 7.5,
+    "geometry.skew_angle": 0
+   },
+   "report": true
+  },
+  {
+   "id": "TC02",
+   "title": "Unlock: span 40 m, skew 10 deg, footpath on one side",
+   "unlock": true,
+   "text": {
+    "geometry.span": 40,
+    "geometry.skew_angle": 10
+   },
+   "combo": {
+    "geometry.footpath": "Single Side"
+   }
+  },
+  {
+   "id": "TC03",
+   "title": "Unlock: 11 m carriageway each way, median, footpaths both sides, skew -12",
+   "unlock": true,
+   "text": {
+    "geometry.carriageway_width": 11,
+    "geometry.skew_angle": -12
+   },
+   "combo": {
+    "geometry.include_median": "Yes",
+    "geometry.footpath": "Both Sides"
+   }
+  },
+  {
+   "id": "TC04",
+   "title": "Unlock: limits span 20 m / skew 15 deg; grades E 250A/E 300A/E 410A, M30",
+   "unlock": true,
+   "text": {
+    "geometry.span": 20,
+    "geometry.carriageway_width": 7.5,
+    "geometry.skew_angle": 15
+   },
+   "combo": {
+    "geometry.include_median": "No",
+    "geometry.footpath": "None",
+    "material.girder": "E 250A",
+    "material.cross_bracing": "E 300A",
+    "material.end_diaphragm": "E 410A",
+    "material.deck": "M30"
+   }
+  }
+ ]
+}

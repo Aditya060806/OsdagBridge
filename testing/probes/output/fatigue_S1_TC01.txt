@@ -1,0 +1,49 @@
+﻿
+SLS frequent cases: 6   controlling girder: G3
+girder   max Mz_i   min Mz_i   max Mz_j   min Mz_j  
+designer range  max |M| per LC  ratio   (kN.m)
+G1         2062.2        0.0       -0.0    -2062.2          
+4124.4          2062.2  2.000
+       check 8: stress range 142.19 MPa / f_fd 92.49 MPa = 
+UR 1.537   with internal sign: 71.10 MPa, UR 0.769
+G2         2072.0       -0.0        0.0    -2072.0          
+4143.9          2072.0  2.000
+       check 8: stress range 142.86 MPa / f_fd 92.49 MPa = 
+UR 1.545   with internal sign: 71.43 MPa, UR 0.772
+G3         2115.4        0.0       -0.0    -2115.4          
+4230.8          2115.4  2.000
+       check 8: stress range 145.86 MPa / f_fd 92.49 MPa = 
+UR 1.577   with internal sign: 72.93 MPa, UR 0.789
+G4         2115.4        0.0       -0.0    -2115.4          
+4230.8          2115.4  2.000
+       check 8: stress range 145.86 MPa / f_fd 92.49 MPa = 
+UR 1.577   with internal sign: 72.93 MPa, UR 0.789
+G5         2072.0       -0.0        0.0    -2072.0          
+4143.9          2072.0  2.000
+       check 8: stress range 142.86 MPa / f_fd 92.49 MPa = 
+UR 1.545   with internal sign: 71.43 MPa, UR 0.772
+G6         2062.2        0.0       -0.0    -2062.2          
+4124.4          2062.2  2.000
+       check 8: stress range 142.19 MPa / f_fd 92.49 MPa = 
+UR 1.537   with internal sign: 71.10 MPa, UR 0.769
+
+girder  Mz range now  Mz per-section  Vy range now  Vy 
+per-section  max|Vy| per LC   (kN.m / kN)
+G1            4124.4          2062.2         586.4          
+ 293.2           293.2
+G2            4143.9          2072.0         723.0          
+ 361.5           361.5
+G3            4230.8          2115.4         548.2          
+ 274.1           274.1
+G4            4230.8          2115.4         548.2          
+ 274.1           274.1
+G5            4143.9          2072.0         723.0          
+ 361.5           361.5
+G6            4124.4          2062.2         586.4          
+ 293.2           293.2
+
+output_dict util.fatigue (report)        = 157.70 %
+Output Dock / Design Check 'Envelope'     = 76.87 %
+ratio                                     = 2.052
+
+

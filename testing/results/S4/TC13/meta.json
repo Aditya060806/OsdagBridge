@@ -1,0 +1,14 @@
+{
+ "probe": [
+  {
+   "key": "geometry.span",
+   "typed": 19,
+   "shown": "20.0"
+  },
+  {
+   "key": "geometry.span",
+   "typed": 46,
+   "shown": "45.0"
+  }
+ ]
+}

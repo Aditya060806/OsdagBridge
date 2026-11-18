@@ -1,0 +1,16 @@
+{
+ "custom_material": {
+  "material.girder": {
+   "name": "custom_steel_1200_1400",
+   "typed": {
+    "material.girder.density": "50.0",
+    "material.girder.fy": "1200.0",
+    "material.girder.fu": "1400",
+    "material.girder.e": "200",
+    "material.girder.g": "76.9",
+    "material.girder.poisson": "0.3",
+    "material.girder.thermal": "11.7"
+   }
+  }
+ }
+}

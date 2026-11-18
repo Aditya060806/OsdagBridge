@@ -1,0 +1,20 @@
+{
+ "design": {
+  "started": true,
+  "seconds": 33.7,
+  "locked_after": true,
+  "popups": []
+ },
+ "report": {
+  "pdf": "D:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S1\\TC01\\report\\TC01_report.pdf",
+  "exists": true,
+  "seconds": 8.2,
+  "popups": [
+   {
+    "title": "Report Generated Successfully",
+    "text": "PDF report saved to:\nD:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S1\\TC01\\report\\TC01_report.pdf",
+    "info": "TeX source: D:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S1\\TC01\\report\\TC01_report.tex"
+   }
+  ]
+ }
+}

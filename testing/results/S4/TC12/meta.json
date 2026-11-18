@@ -1,0 +1,14 @@
+{
+ "design": {
+  "started": false,
+  "seconds": 2.8,
+  "locked_after": false,
+  "popups": [
+   {
+    "title": "Empty Required Fields",
+    "text": "Please fill in the required(*) fields before proceeding:\n - Project Location\n - Span (m)\n - Carriageway Width (Each way) (m)\n",
+    "info": ""
+   }
+  ]
+ }
+}

@@ -1,0 +1,2438 @@
+[
+ {
+  "case": "TC01",
+  "session": "S1",
+  "designed": true,
+  "meta": {
+   "design": {
+    "started": true,
+    "seconds": 33.7,
+    "locked_after": true,
+    "popups": []
+   },
+   "report": {
+    "pdf": "D:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S1\\TC01\\report\\TC01_report.pdf",
+    "exists": true,
+    "seconds": 8.2,
+    "popups": [
+     {
+      "title": "Report Generated Successfully",
+      "text": "PDF report saved to:\nD:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S1\\TC01\\report\\TC01_report.pdf",
+      "info": "TeX source: D:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S1\\TC01\\report\\TC01_report.tex"
+     }
+    ]
+   }
+  },
+  "images": {
+   "cad3d": "5be22c1e412e96a8c2e64b31672772a7",
+   "plots": "2602154d7ed2ca76bddafa76b8891ab2",
+   "cross_section": "bb7bd0be6addb8c08b439331132cd819",
+   "top_view": "d1b808aeb648d441b30f43ac08a90717"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 4,
+   "spacing_m": 2.1,
+   "overhang_m": 1.05,
+   "fresh_session_girders": 4,
+   "lines_checked": 6,
+   "controlling": "G3"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "350.0",
+    "used": 350.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "490.0",
+    "used": 490.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "40.0",
+    "used": 40.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "33.0",
+    "used": 33.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 19.57,
+    "dock_max": 19.57
+   },
+   "shear": {
+    "output_dict": 40.03,
+    "dock_max": 52.76
+   },
+   "interaction": {
+    "output_dict": 19.8,
+    "dock_max": 19.84
+   },
+   "ltb": {
+    "output_dict": 22.79,
+    "dock_max": 22.9
+   },
+   "long_trans_shear": {
+    "output_dict": 19.82,
+    "dock_max": 19.82
+   },
+   "fatigue": {
+    "output_dict": 157.7,
+    "dock_max": 78.85
+   },
+   "stress_limitation": {
+    "output_dict": 24.94,
+    "dock_max": 25.76
+   },
+   "deflection_crack": {
+    "output_dict": 45.74,
+    "dock_max": 45.74
+   }
+  },
+  "util_mismatch": [
+   "shear",
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    1670.0,
+    510.0,
+    22.0,
+    510.0,
+    22.0,
+    10.0
+   ],
+   "girder_drawn_mm": [
+    1670.0,
+    510.0,
+    22.0,
+    510.0,
+    22.0,
+    10.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 15.0,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 8.4,
+   "layout_width_m": 8.4
+  },
+  "report": {
+   "overall_ur": [
+    1.58
+   ],
+   "Mu_rows": [
+    2224.95,
+    2224.95,
+    2224.95,
+    2224.95
+   ],
+   "Vu_rows": [
+    288.29,
+    288.29,
+    288.29,
+    288.29
+   ],
+   "shear_ur_rows": [
+    0.4,
+    0.4,
+    0.4,
+    0.4
+   ],
+   "fatigue_ur_rows": [
+    1.537,
+    1.545,
+    1.577,
+    1.577
+   ],
+   "per_girder_Vu": {
+    "G1": 307.91,
+    "G2": 379.98,
+    "G3": 288.29,
+    "G4": 288.29,
+    "G5": 379.98,
+    "G6": 307.91
+   },
+   "per_girder_Mu": {
+    "G1": 2172.24,
+    "G2": 2181.62,
+    "G3": 2224.95,
+    "G4": 2224.95,
+    "G5": 2181.62,
+    "G6": 2172.24
+   },
+   "output_max_util": 1.58
+  }
+ },
+ {
+  "case": "TC02",
+  "session": "S1",
+  "designed": true,
+  "meta": {
+   "design": {
+    "started": true,
+    "seconds": 51.8,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "e7b54c6478cf86bdccfef9a0ea29e75d",
+   "plots": "517be656ee500ced82bc57090dc58e4f",
+   "cross_section": "78f467cfe60e295ed1c2a99ed47f6940",
+   "top_view": "a1935ec59c1286fa7381fc5eba1200e9"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 4,
+   "spacing_m": 2.5687,
+   "overhang_m": 1.2844,
+   "fresh_session_girders": 5,
+   "lines_checked": 1,
+   "controlling": "G1"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "350.0",
+    "used": 350.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "490.0",
+    "used": 490.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "40.0",
+    "used": 40.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "33.0",
+    "used": 33.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 18.47,
+    "dock_max": 18.47
+   },
+   "shear": {
+    "output_dict": 45.23,
+    "dock_max": 45.23
+   },
+   "interaction": {
+    "output_dict": 19.05,
+    "dock_max": 19.05
+   },
+   "ltb": {
+    "output_dict": 33.06,
+    "dock_max": 33.06
+   },
+   "long_trans_shear": {
+    "output_dict": 18.75,
+    "dock_max": 18.75
+   },
+   "fatigue": {
+    "output_dict": 150.48,
+    "dock_max": 75.24
+   },
+   "stress_limitation": {
+    "output_dict": 23.73,
+    "dock_max": 23.73
+   },
+   "deflection_crack": {
+    "output_dict": 44.55,
+    "dock_max": 44.55
+   }
+  },
+  "util_mismatch": [
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    2230.0,
+    670.0,
+    28.0,
+    670.0,
+    28.0,
+    12.0
+   ],
+   "girder_drawn_mm": [
+    2230.0,
+    670.0,
+    28.0,
+    670.0,
+    28.0,
+    12.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 20.0,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 10.18,
+   "layout_width_m": 10.275
+  }
+ },
+ {
+  "case": "TC03",
+  "session": "S1",
+  "designed": true,
+  "meta": {
+   "design": {
+    "started": true,
+    "seconds": 70.1,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "a8f9ef331c2c4dccb461bd6a5e9c62b0",
+   "plots": "6d4ad1eb469afda8087743040ddd04b4",
+   "cross_section": "7af39e5244d2648313273aaaf144e0a9",
+   "top_view": "b3d768adcaeaa04ca9552f1346e8c379"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 4,
+   "spacing_m": 6.9625,
+   "overhang_m": 3.4812,
+   "fresh_session_girders": 12,
+   "lines_checked": 1,
+   "controlling": "G1"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "350.0",
+    "used": 350.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "490.0",
+    "used": 490.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "40.0",
+    "used": 40.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "33.0",
+    "used": 33.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 35.13,
+    "dock_max": 35.13
+   },
+   "shear": {
+    "output_dict": 187.82,
+    "dock_max": 187.82
+   },
+   "interaction": {
+    "output_dict": 36.21,
+    "dock_max": 36.21
+   },
+   "ltb": {
+    "output_dict": 37.6,
+    "dock_max": 37.6
+   },
+   "long_trans_shear": {
+    "output_dict": 40.09,
+    "dock_max": 40.09
+   },
+   "fatigue": {
+    "output_dict": 296.74,
+    "dock_max": 148.37
+   },
+   "stress_limitation": {
+    "output_dict": 59.24,
+    "dock_max": 59.24
+   },
+   "deflection_crack": {
+    "output_dict": 76.74,
+    "dock_max": 76.74
+   }
+  },
+  "util_mismatch": [
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    2230.0,
+    670.0,
+    28.0,
+    670.0,
+    28.0,
+    12.0
+   ],
+   "girder_drawn_mm": [
+    2230.0,
+    670.0,
+    28.0,
+    670.0,
+    28.0,
+    12.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 20.0,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "60 x 60 x 4",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 26.45,
+   "layout_width_m": 27.85
+  }
+ },
+ {
+  "case": "TC04",
+  "session": "S1",
+  "designed": true,
+  "meta": {
+   "design": {
+    "started": true,
+    "seconds": 24.9,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "e36c7fc405cfc4e5dc5aadbe236b5a01",
+   "plots": "d388711495623ef8dfd20f0403229d76",
+   "cross_section": "3ed7ef8dbc68a0ea7974f91267a856dd",
+   "top_view": "d709ae60d9bbab2d475bc5407b61563f"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 4,
+   "spacing_m": 2.1,
+   "overhang_m": 1.05,
+   "fresh_session_girders": 4,
+   "lines_checked": 1,
+   "controlling": "G1"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "250.0",
+    "used": 250.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "410.0",
+    "used": 410.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "30.0",
+    "used": 30.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "31.0",
+    "used": 31.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 33.72,
+    "dock_max": 33.72
+   },
+   "shear": {
+    "output_dict": 41.79,
+    "dock_max": 41.79
+   },
+   "interaction": {
+    "output_dict": 34.68,
+    "dock_max": 34.68
+   },
+   "ltb": {
+    "output_dict": 24.83,
+    "dock_max": 24.83
+   },
+   "long_trans_shear": {
+    "output_dict": 21.01,
+    "dock_max": 21.01
+   },
+   "fatigue": {
+    "output_dict": 211.89,
+    "dock_max": 105.94
+   },
+   "stress_limitation": {
+    "output_dict": 46.67,
+    "dock_max": 46.67
+   },
+   "deflection_crack": {
+    "output_dict": 62.0,
+    "dock_max": 62.0
+   }
+  },
+  "util_mismatch": [
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    1120.0,
+    340.0,
+    16.0,
+    340.0,
+    16.0,
+    8.0
+   ],
+   "girder_drawn_mm": [
+    1120.0,
+    340.0,
+    16.0,
+    340.0,
+    16.0,
+    8.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 10.0,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 8.4,
+   "layout_width_m": 8.4
+  }
+ },
+ {
+  "case": "TC05",
+  "session": "S2",
+  "designed": true,
+  "meta": {
+   "custom_material": {
+    "material.girder": {
+     "name": "custom_steel_345_480",
+     "typed": {
+      "material.girder.density": "78.5",
+      "material.girder.fy": "345",
+      "material.girder.fu": "480",
+      "material.girder.e": "205",
+      "material.girder.g": "78.8",
+      "material.girder.poisson": "0.3",
+      "material.girder.thermal": "12.0"
+     }
+    },
+    "material.cross_bracing": {
+     "name": "custom_steel_260_410",
+     "typed": {
+      "material.girder.density": "77.0",
+      "material.girder.fy": "260",
+      "material.girder.fu": "410",
+      "material.girder.e": "200",
+      "material.girder.g": "76.9",
+      "material.girder.poisson": "0.3",
+      "material.girder.thermal": "11.7"
+     }
+    },
+    "material.end_diaphragm": {
+     "name": "custom_steel_300_440",
+     "typed": {
+      "material.girder.density": "76.9",
+      "material.girder.fy": "300",
+      "material.girder.fu": "440",
+      "material.girder.e": "200",
+      "material.girder.g": "76.9",
+      "material.girder.poisson": "0.3",
+      "material.girder.thermal": "11.7"
+     }
+    },
+    "material.deck": {
+     "name": "custom_concrete_42_3.2",
+     "typed": {
+      "material.deck.density": "25.5",
+      "material.deck.fck": "42",
+      "material.deck.fctm": "3.2",
+      "material.deck.ecm": "33.5",
+      "material.deck.thermal": "10.5"
+     }
+    }
+   },
+   "design": {
+    "started": true,
+    "seconds": 30.2,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "861656b87a66fe489d26f3a03f9a84ca",
+   "plots": "317ed26f48444596c4306b55e2aa0cce",
+   "cross_section": "b4485650ac8d04f264a761107ff722b2",
+   "top_view": "54ca451f8f7f53022d4306179b799fa2"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 4,
+   "spacing_m": 2.1,
+   "overhang_m": 1.05,
+   "fresh_session_girders": 4,
+   "lines_checked": 1,
+   "controlling": "G1"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "205",
+    "used": 205.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "345",
+    "used": 345.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "480",
+    "used": 480.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "78.5",
+    "used": 78.5,
+    "ok": true
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "42",
+    "used": 42.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "33.5",
+    "used": 33.5,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "25.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 23.8,
+    "dock_max": 23.8
+   },
+   "shear": {
+    "output_dict": 56.92,
+    "dock_max": 56.92
+   },
+   "interaction": {
+    "output_dict": 24.48,
+    "dock_max": 24.48
+   },
+   "ltb": {
+    "output_dict": 19.37,
+    "dock_max": 19.37
+   },
+   "long_trans_shear": {
+    "output_dict": 24.19,
+    "dock_max": 24.19
+   },
+   "fatigue": {
+    "output_dict": 198.34,
+    "dock_max": 99.17
+   },
+   "stress_limitation": {
+    "output_dict": 32.03,
+    "dock_max": 32.03
+   },
+   "deflection_crack": {
+    "output_dict": 52.98,
+    "dock_max": 52.98
+   }
+  },
+  "util_mismatch": [
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    1390.0,
+    420.0,
+    18.0,
+    420.0,
+    18.0,
+    8.0
+   ],
+   "girder_drawn_mm": [
+    1390.0,
+    420.0,
+    18.0,
+    420.0,
+    18.0,
+    8.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 12.5,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 8.4,
+   "layout_width_m": 8.4
+  }
+ },
+ {
+  "case": "TC06",
+  "session": "S2",
+  "designed": true,
+  "meta": {
+   "custom_material": {
+    "material.girder": {
+     "name": "custom_steel_410_540",
+     "typed": {
+      "material.girder.density": "80.0",
+      "material.girder.fy": "410",
+      "material.girder.fu": "540",
+      "material.girder.e": "210",
+      "material.girder.g": "80.8",
+      "material.girder.poisson": "0.3",
+      "material.girder.thermal": "12.0"
+     }
+    }
+   },
+   "design": {
+    "started": true,
+    "seconds": 29.5,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "3f691287c2c385358d71c4fbd53b86b4",
+   "plots": "4bf3eeee29af82e6ae0630f3cd0130ef",
+   "cross_section": "b4485650ac8d04f264a761107ff722b2",
+   "top_view": "54ca451f8f7f53022d4306179b799fa2"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 4,
+   "spacing_m": 2.1,
+   "overhang_m": 1.05,
+   "fresh_session_girders": 4,
+   "lines_checked": 1,
+   "controlling": "G1"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "210",
+    "used": 210.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "410",
+    "used": 410.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "540",
+    "used": 540.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "80.0",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "35.0",
+    "used": 35.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "32.0",
+    "used": 32.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 21.16,
+    "dock_max": 21.16
+   },
+   "shear": {
+    "output_dict": 56.92,
+    "dock_max": 56.92
+   },
+   "interaction": {
+    "output_dict": 21.73,
+    "dock_max": 21.73
+   },
+   "ltb": {
+    "output_dict": 18.67,
+    "dock_max": 18.67
+   },
+   "long_trans_shear": {
+    "output_dict": 22.59,
+    "dock_max": 22.59
+   },
+   "fatigue": {
+    "output_dict": 198.34,
+    "dock_max": 99.17
+   },
+   "stress_limitation": {
+    "output_dict": 26.95,
+    "dock_max": 26.95
+   },
+   "deflection_crack": {
+    "output_dict": 51.72,
+    "dock_max": 51.72
+   }
+  },
+  "util_mismatch": [
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    1390.0,
+    420.0,
+    18.0,
+    420.0,
+    18.0,
+    8.0
+   ],
+   "girder_drawn_mm": [
+    1390.0,
+    420.0,
+    18.0,
+    420.0,
+    18.0,
+    8.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 12.5,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 8.4,
+   "layout_width_m": 8.4
+  }
+ },
+ {
+  "case": "TC07",
+  "session": "S2",
+  "designed": true,
+  "meta": {
+   "design": {
+    "started": true,
+    "seconds": 29.7,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "ea91aab2120ba4979addea59f099dfa7",
+   "plots": "4bf3eeee29af82e6ae0630f3cd0130ef",
+   "cross_section": "b4485650ac8d04f264a761107ff722b2",
+   "top_view": "54ca451f8f7f53022d4306179b799fa2"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 4,
+   "spacing_m": 2.1,
+   "overhang_m": 1.05,
+   "fresh_session_girders": 4,
+   "lines_checked": 1,
+   "controlling": "G1"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "350.0",
+    "used": 350.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "490.0",
+    "used": 490.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "35.0",
+    "used": 35.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "32.0",
+    "used": 32.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 24.23,
+    "dock_max": 24.23
+   },
+   "shear": {
+    "output_dict": 56.92,
+    "dock_max": 56.92
+   },
+   "interaction": {
+    "output_dict": 24.89,
+    "dock_max": 24.89
+   },
+   "ltb": {
+    "output_dict": 19.79,
+    "dock_max": 19.79
+   },
+   "long_trans_shear": {
+    "output_dict": 22.59,
+    "dock_max": 22.59
+   },
+   "fatigue": {
+    "output_dict": 198.34,
+    "dock_max": 99.17
+   },
+   "stress_limitation": {
+    "output_dict": 31.57,
+    "dock_max": 31.57
+   },
+   "deflection_crack": {
+    "output_dict": 54.3,
+    "dock_max": 54.3
+   }
+  },
+  "util_mismatch": [
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    1390.0,
+    420.0,
+    18.0,
+    420.0,
+    18.0,
+    8.0
+   ],
+   "girder_drawn_mm": [
+    1390.0,
+    420.0,
+    18.0,
+    420.0,
+    18.0,
+    8.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 12.5,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 8.4,
+   "layout_width_m": 8.4
+  }
+ },
+ {
+  "case": "TC08",
+  "session": "S2",
+  "designed": true,
+  "meta": {
+   "custom_material": {
+    "material.cross_bracing": {
+     "name": "custom_steel_410_540",
+     "typed": {
+      "material.girder.density": "77.0",
+      "material.girder.fy": "410",
+      "material.girder.fu": "540",
+      "material.girder.e": "200",
+      "material.girder.g": "76.9",
+      "material.girder.poisson": "0.3",
+      "material.girder.thermal": "11.7"
+     }
+    }
+   },
+   "design": {
+    "started": true,
+    "seconds": 28.9,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "4cb74b8f683ed593d00985170c59dabc",
+   "plots": "4bf3eeee29af82e6ae0630f3cd0130ef",
+   "cross_section": "b4485650ac8d04f264a761107ff722b2",
+   "top_view": "54ca451f8f7f53022d4306179b799fa2"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 4,
+   "spacing_m": 2.1,
+   "overhang_m": 1.05,
+   "fresh_session_girders": 4,
+   "lines_checked": 1,
+   "controlling": "G1"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "410",
+    "used": 410.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "540",
+    "used": 540.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "77.0",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "35.0",
+    "used": 35.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "32.0",
+    "used": 32.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 21.16,
+    "dock_max": 21.16
+   },
+   "shear": {
+    "output_dict": 56.92,
+    "dock_max": 56.92
+   },
+   "interaction": {
+    "output_dict": 21.73,
+    "dock_max": 21.73
+   },
+   "ltb": {
+    "output_dict": 19.52,
+    "dock_max": 19.52
+   },
+   "long_trans_shear": {
+    "output_dict": 22.59,
+    "dock_max": 22.59
+   },
+   "fatigue": {
+    "output_dict": 198.34,
+    "dock_max": 99.17
+   },
+   "stress_limitation": {
+    "output_dict": 26.95,
+    "dock_max": 26.95
+   },
+   "deflection_crack": {
+    "output_dict": 54.3,
+    "dock_max": 54.3
+   }
+  },
+  "util_mismatch": [
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    1390.0,
+    420.0,
+    18.0,
+    420.0,
+    18.0,
+    8.0
+   ],
+   "girder_drawn_mm": [
+    1390.0,
+    420.0,
+    18.0,
+    420.0,
+    18.0,
+    8.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 12.5,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 8.4,
+   "layout_width_m": 8.4
+  }
+ },
+ {
+  "case": "TC09",
+  "session": "S3",
+  "designed": true,
+  "meta": {
+   "additional": {
+    "member_properties.girder_details.section_input.symmetry": "Girder Unsymmetric",
+    "member_properties.girder_details.section_input.depth": 1800,
+    "member_properties.girder_details.section_input.top_flange_width": 450,
+    "member_properties.girder_details.section_input.top_flange_thickness": "25",
+    "member_properties.girder_details.section_input.bottom_flange_width": 550,
+    "member_properties.girder_details.section_input.bottom_flange_thickness": 32,
+    "member_properties.girder_details.section_input.web_thickness": 14,
+    "member_properties.stiffener_details.intermediate_stiffener": "Yes",
+    "member_properties.stiffener_details.intermediate_stiffener_spacing": 1800,
+    "member_properties.stiffener_details.intermediate_stiffener_thickness": 12,
+    "member_properties.stiffener_details.intermediate_stiffener_outstand": 150,
+    "member_properties.stiffener_details.bearing_stiffener_plate_thickness": 16,
+    "member_properties.stiffener_details.bearing_stiffener_outstand": 200,
+    "typical_section.deck_thickness": 230,
+    "typical_section.wearing_course.thickness": 65,
+    "design_options.shear_studs.diameter": 22,
+    "design_options.shear_studs.height": 120,
+    "design_options.deck.bottom_clear_cover": 40
+   },
+   "design": {
+    "started": true,
+    "seconds": 73.9,
+    "locked_after": true,
+    "popups": []
+   },
+   "report": {
+    "pdf": "D:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S3\\TC09\\report\\TC09_report.pdf",
+    "exists": true,
+    "seconds": 9.2,
+    "popups": [
+     {
+      "title": "Report Generated Successfully",
+      "text": "PDF report saved to:\nD:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S3\\TC09\\report\\TC09_report.pdf",
+      "info": "TeX source: D:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S3\\TC09\\report\\TC09_report.tex"
+     }
+    ]
+   }
+  },
+  "images": {
+   "cad3d": "470a1cc6feb4606571c3734bc290f15d",
+   "plots": "b6d1a99695f192e1d9a7107ff83d90ed",
+   "cross_section": "90375a6a2dd569591fefe865c65caeac",
+   "top_view": "86db7daad55708c2031f16b5b8455699"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 4,
+   "spacing_m": 2.475,
+   "overhang_m": 1.2375,
+   "fresh_session_girders": 4,
+   "lines_checked": 6,
+   "controlling": "G3"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "350.0",
+    "used": 350.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "490.0",
+    "used": 490.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "40.0",
+    "used": 40.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "33.0",
+    "used": 33.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 17.59,
+    "dock_max": 17.59
+   },
+   "shear": {
+    "output_dict": 16.28,
+    "dock_max": 21.97
+   },
+   "interaction": {
+    "output_dict": 18.16,
+    "dock_max": 18.39
+   },
+   "ltb": {
+    "output_dict": 37.98,
+    "dock_max": 38.04
+   },
+   "long_trans_shear": {
+    "output_dict": 16.33,
+    "dock_max": 15.62
+   },
+   "fatigue": {
+    "output_dict": 146.67,
+    "dock_max": 73.33
+   },
+   "stress_limitation": {
+    "output_dict": 21.84,
+    "dock_max": 22.86
+   },
+   "deflection_crack": {
+    "output_dict": 43.17,
+    "dock_max": 43.17
+   }
+  },
+  "util_mismatch": [
+   "shear",
+   "fatigue",
+   "stress_limitation"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    1800.0,
+    450.0,
+    25.0,
+    550.0,
+    32.0,
+    14.0
+   ],
+   "girder_drawn_mm": [
+    1800.0,
+    450.0,
+    25.0,
+    550.0,
+    32.0,
+    14.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 17.5,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 9.9,
+   "layout_width_m": 9.9
+  },
+  "report": {
+   "overall_ur": [
+    1.47
+   ],
+   "Mu_rows": [
+    3137.57,
+    3137.57,
+    3137.57,
+    3137.57
+   ],
+   "Vu_rows": [
+    383.37,
+    383.37,
+    383.37,
+    383.37
+   ],
+   "shear_ur_rows": [
+    0.16,
+    0.16,
+    0.16,
+    0.16
+   ],
+   "fatigue_ur_rows": [
+    1.451,
+    1.45,
+    1.467,
+    1.467
+   ],
+   "per_girder_Vu": {
+    "G1": 398.2,
+    "G2": 517.22,
+    "G3": 383.37,
+    "G4": 383.37,
+    "G5": 517.22,
+    "G6": 398.2
+   },
+   "per_girder_Mu": {
+    "G1": 3110.8,
+    "G2": 3109.72,
+    "G3": 3137.57,
+    "G4": 3137.57,
+    "G5": 3109.72,
+    "G6": 3110.8
+   },
+   "output_max_util": 1.47
+  }
+ },
+ {
+  "case": "TC10",
+  "session": "S3",
+  "designed": true,
+  "meta": {
+   "additional": {
+    "member_properties.girder_details.section_input.depth": 1600,
+    "typical_section.deck_thickness": 260,
+    "member_properties.stiffener_details.intermediate_stiffener_spacing": 1500
+   },
+   "design": {
+    "started": true,
+    "seconds": 76.2,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "13d190a45aeb8eb61e300c1bbdcf7bad",
+   "plots": "27d526a0def93b08ac7ebe0d4ad00202",
+   "cross_section": "9f8ebe2e0e661e9097d905725a743544",
+   "top_view": "fe320569e8da054db364b91b7faaa611"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 4,
+   "spacing_m": 2.475,
+   "overhang_m": 1.2375,
+   "fresh_session_girders": 4,
+   "lines_checked": 6,
+   "controlling": "G3"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "350.0",
+    "used": 350.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "490.0",
+    "used": 490.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "40.0",
+    "used": 40.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "33.0",
+    "used": 33.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 20.95,
+    "dock_max": 20.95
+   },
+   "shear": {
+    "output_dict": 14.68,
+    "dock_max": 19.8
+   },
+   "interaction": {
+    "output_dict": 21.6,
+    "dock_max": 21.86
+   },
+   "ltb": {
+    "output_dict": 38.46,
+    "dock_max": 38.52
+   },
+   "long_trans_shear": {
+    "output_dict": 17.21,
+    "dock_max": 17.21
+   },
+   "fatigue": {
+    "output_dict": 174.87,
+    "dock_max": 87.44
+   },
+   "stress_limitation": {
+    "output_dict": 26.03,
+    "dock_max": 27.3
+   },
+   "deflection_crack": {
+    "output_dict": 55.9,
+    "dock_max": 55.9
+   }
+  },
+  "util_mismatch": [
+   "shear",
+   "fatigue",
+   "stress_limitation"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    1600.0,
+    450.0,
+    25.0,
+    550.0,
+    32.0,
+    14.0
+   ],
+   "girder_drawn_mm": [
+    1600.0,
+    450.0,
+    25.0,
+    550.0,
+    32.0,
+    14.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 17.5,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 9.9,
+   "layout_width_m": 9.9
+  }
+ },
+ {
+  "case": "TC11",
+  "session": "S3",
+  "designed": true,
+  "meta": {
+   "design": {
+    "started": true,
+    "seconds": 83.4,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "6f0a13603702cbabb402f05e634a2486",
+   "plots": "85557d2871cbb2d768a670ea88749ccf",
+   "cross_section": "77f963b417923fd981c58f26be2b8f2c",
+   "top_view": "752ce112fda36ea134e3578c853e1a00"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 4,
+   "spacing_m": 2.475,
+   "overhang_m": 1.2375,
+   "fresh_session_girders": 4,
+   "lines_checked": 6,
+   "controlling": "G1"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "350.0",
+    "used": 350.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "490.0",
+    "used": 490.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "40.0",
+    "used": 40.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "33.0",
+    "used": 33.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 37.7,
+    "dock_max": 37.7
+   },
+   "shear": {
+    "output_dict": 25.6,
+    "dock_max": 25.6
+   },
+   "interaction": {
+    "output_dict": 38.63,
+    "dock_max": 38.63
+   },
+   "ltb": {
+    "output_dict": 83.91,
+    "dock_max": 83.91
+   },
+   "long_trans_shear": {
+    "output_dict": 21.65,
+    "dock_max": 18.75
+   },
+   "fatigue": {
+    "output_dict": 186.22,
+    "dock_max": 93.11
+   },
+   "stress_limitation": {
+    "output_dict": 46.26,
+    "dock_max": 46.26
+   },
+   "deflection_crack": {
+    "output_dict": 54.3,
+    "dock_max": 54.38
+   }
+  },
+  "util_mismatch": [
+   "long_trans_shear",
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    1600.0,
+    450.0,
+    25.0,
+    550.0,
+    32.0,
+    14.0
+   ],
+   "girder_drawn_mm": [
+    2120.0,
+    640.0,
+    28.0,
+    750.0,
+    32.0,
+    12.0
+   ],
+   "girder_ok": false,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 19.0,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 9.9,
+   "layout_width_m": 9.9
+  }
+ },
+ {
+  "case": "TC12",
+  "session": "S4",
+  "designed": false,
+  "meta": {
+   "design": {
+    "started": false,
+    "seconds": 2.8,
+    "locked_after": false,
+    "popups": [
+     {
+      "title": "Empty Required Fields",
+      "text": "Please fill in the required(*) fields before proceeding:\n - Project Location\n - Span (m)\n - Carriageway Width (Each way) (m)\n",
+      "info": ""
+     }
+    ]
+   }
+  },
+  "images": {
+   "cad3d": null,
+   "plots": null,
+   "cross_section": null,
+   "top_view": null
+  },
+  "ui_mismatch": []
+ },
+ {
+  "case": "TC13",
+  "session": "S4",
+  "designed": false,
+  "meta": {
+   "probe": [
+    {
+     "key": "geometry.span",
+     "typed": 19,
+     "shown": "20.0"
+    },
+    {
+     "key": "geometry.span",
+     "typed": 46,
+     "shown": "45.0"
+    }
+   ]
+  },
+  "images": {
+   "cad3d": null,
+   "plots": null,
+   "cross_section": null,
+   "top_view": null
+  },
+  "ui_mismatch": []
+ },
+ {
+  "case": "TC14",
+  "session": "S4",
+  "designed": false,
+  "meta": {
+   "probe": [
+    {
+     "key": "geometry.carriageway_width",
+     "typed": 4.0,
+     "shown": "4.25"
+    },
+    {
+     "key": "geometry.carriageway_width",
+     "typed": 24,
+     "shown": "23.6"
+    },
+    {
+     "key": "geometry.carriageway_width",
+     "typed": 7.0,
+     "median": "Yes",
+     "shown": "7.5"
+    }
+   ]
+  },
+  "images": {
+   "cad3d": null,
+   "plots": null,
+   "cross_section": null,
+   "top_view": null
+  },
+  "ui_mismatch": []
+ },
+ {
+  "case": "TC15",
+  "session": "S4",
+  "designed": false,
+  "meta": {
+   "probe": [
+    {
+     "key": "geometry.skew_angle",
+     "typed": 20,
+     "shown": "15.0"
+    },
+    {
+     "key": "geometry.skew_angle",
+     "typed": -20,
+     "shown": "-15.0"
+    }
+   ]
+  },
+  "images": {
+   "cad3d": null,
+   "plots": null,
+   "cross_section": null,
+   "top_view": null
+  },
+  "ui_mismatch": []
+ },
+ {
+  "case": "TC16",
+  "session": "S4",
+  "designed": false,
+  "meta": {
+   "custom_material": {
+    "material.girder": {
+     "name": "custom_steel_1200_1400",
+     "typed": {
+      "material.girder.density": "50.0",
+      "material.girder.fy": "1200.0",
+      "material.girder.fu": "1400",
+      "material.girder.e": "200",
+      "material.girder.g": "76.9",
+      "material.girder.poisson": "0.3",
+      "material.girder.thermal": "11.7"
+     }
+    }
+   }
+  },
+  "images": {
+   "cad3d": null,
+   "plots": null,
+   "cross_section": null,
+   "top_view": null
+  },
+  "ui_mismatch": []
+ },
+ {
+  "case": "TC17",
+  "session": "S5",
+  "designed": true,
+  "meta": {
+   "design": {
+    "started": true,
+    "seconds": 98.5,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "3de67ba3fec51d98150e6afecd019b2f",
+   "plots": "9189c0ff05ef311b6e25dbab4e33baeb",
+   "cross_section": "08297164b2f5b87d8823f53471b62403",
+   "top_view": "3623176b526dfa830a5acf9a32856878"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 5,
+   "spacing_m": 5.57,
+   "overhang_m": 2.785,
+   "fresh_session_girders": 12,
+   "lines_checked": 1,
+   "controlling": "G1"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "350.0",
+    "used": 350.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "490.0",
+    "used": 490.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "40.0",
+    "used": 40.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "33.0",
+    "used": 33.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 31.1,
+    "dock_max": 31.1
+   },
+   "shear": {
+    "output_dict": 110.14,
+    "dock_max": 110.14
+   },
+   "interaction": {
+    "output_dict": 32.08,
+    "dock_max": 32.08
+   },
+   "ltb": {
+    "output_dict": 34.12,
+    "dock_max": 34.12
+   },
+   "long_trans_shear": {
+    "output_dict": 39.43,
+    "dock_max": 39.43
+   },
+   "fatigue": {
+    "output_dict": 259.43,
+    "dock_max": 129.71
+   },
+   "stress_limitation": {
+    "output_dict": 42.31,
+    "dock_max": 42.31
+   },
+   "deflection_crack": {
+    "output_dict": 68.57,
+    "dock_max": 68.57
+   }
+  },
+  "util_mismatch": [
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    2230.0,
+    670.0,
+    28.0,
+    670.0,
+    28.0,
+    12.0
+   ],
+   "girder_drawn_mm": [
+    2230.0,
+    670.0,
+    28.0,
+    670.0,
+    28.0,
+    12.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 20.0,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "50 x 50 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 26.45,
+   "layout_width_m": 27.85
+  }
+ },
+ {
+  "case": "TC18",
+  "session": "S5",
+  "designed": true,
+  "meta": {
+   "design": {
+    "started": true,
+    "seconds": 44.0,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "97a0839b6c456b0af35d91969684adf3",
+   "plots": "051f0b5bf7e27f581625c1b469f7cd73",
+   "cross_section": "ad0bde08ee50e7b24c726d735ddc4c45",
+   "top_view": "a7b130dbd0bba5f18de381f26ba46ec9"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 5,
+   "spacing_m": 1.68,
+   "overhang_m": 0.84,
+   "fresh_session_girders": 4,
+   "lines_checked": 7,
+   "controlling": "G4"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "350.0",
+    "used": 350.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "490.0",
+    "used": 490.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "40.0",
+    "used": 40.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "33.0",
+    "used": 33.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 17.56,
+    "dock_max": 17.56
+   },
+   "shear": {
+    "output_dict": 39.2,
+    "dock_max": 47.58
+   },
+   "interaction": {
+    "output_dict": 17.77,
+    "dock_max": 17.77
+   },
+   "ltb": {
+    "output_dict": 24.43,
+    "dock_max": 24.54
+   },
+   "long_trans_shear": {
+    "output_dict": 18.75,
+    "dock_max": 18.75
+   },
+   "fatigue": {
+    "output_dict": 140.22,
+    "dock_max": 70.11
+   },
+   "stress_limitation": {
+    "output_dict": 22.12,
+    "dock_max": 22.39
+   },
+   "deflection_crack": {
+    "output_dict": 42.18,
+    "dock_max": 42.18
+   }
+  },
+  "util_mismatch": [
+   "shear",
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    1670.0,
+    510.0,
+    22.0,
+    510.0,
+    22.0,
+    10.0
+   ],
+   "girder_drawn_mm": [
+    1670.0,
+    510.0,
+    22.0,
+    510.0,
+    22.0,
+    10.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 15.0,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 8.4,
+   "layout_width_m": 8.4
+  }
+ },
+ {
+  "case": "TC19",
+  "session": "S6",
+  "designed": true,
+  "meta": {
+   "design": {
+    "started": true,
+    "seconds": 132.9,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "084ccb78a7136a0be7e329d4f85b29c1",
+   "plots": "75febee47d9aaa8206ed3287b25dab55",
+   "cross_section": "99f31ebc105d45a52389e7dd160ab123",
+   "top_view": "2fd0b71c48db2afd86ce2e3e43bf72e0"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 7,
+   "spacing_m": 3.9786,
+   "overhang_m": 1.9893,
+   "fresh_session_girders": 12,
+   "lines_checked": 9,
+   "controlling": "G5"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "350.0",
+    "used": 350.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "490.0",
+    "used": 490.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "40.0",
+    "used": 40.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "33.0",
+    "used": 33.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 0.0,
+    "dock_max": 15.78
+   },
+   "shear": {
+    "output_dict": 0.0,
+    "dock_max": 64.34
+   },
+   "interaction": {
+    "output_dict": 0.0,
+    "dock_max": 15.78
+   },
+   "ltb": {
+    "output_dict": 39.07,
+    "dock_max": 39.07
+   },
+   "long_trans_shear": {
+    "output_dict": 28.16,
+    "dock_max": 28.16
+   },
+   "fatigue": {
+    "output_dict": 0.0,
+    "dock_max": null
+   },
+   "stress_limitation": {
+    "output_dict": 0.0,
+    "dock_max": 23.13
+   },
+   "deflection_crack": {
+    "output_dict": 0.0,
+    "dock_max": null
+   }
+  },
+  "util_mismatch": [
+   "flexure",
+   "shear",
+   "interaction",
+   "stress_limitation"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    2230.0,
+    670.0,
+    28.0,
+    670.0,
+    28.0,
+    12.0
+   ],
+   "girder_drawn_mm": [
+    2230.0,
+    670.0,
+    28.0,
+    670.0,
+    28.0,
+    12.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 20.0,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": null,
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 26.45,
+   "layout_width_m": 27.85
+  }
+ },
+ {
+  "case": "TC20",
+  "session": "S6",
+  "designed": true,
+  "meta": {
+   "design": {
+    "started": true,
+    "seconds": 64.9,
+    "locked_after": true,
+    "popups": []
+   }
+  },
+  "images": {
+   "cad3d": "24f92ffc82cebf630720b8283f2a2df8",
+   "plots": "331602bd2586ce1fd075341dc9c4ac63",
+   "cross_section": "cbe2214f4721714513118aa4d193b469",
+   "top_view": "c7d3d30e4657a958cf9d01390b24c3bf"
+  },
+  "ui_mismatch": [],
+  "dict_mismatch": [],
+  "layout": {
+   "girders": 7,
+   "spacing_m": 1.2,
+   "overhang_m": 0.6,
+   "fresh_session_girders": 4,
+   "lines_checked": 9,
+   "controlling": "G5"
+  },
+  "materials": [
+   {
+    "property": "girder E (GPa)",
+    "input_dict": "200.0",
+    "used": 200.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fy (MPa)",
+    "input_dict": "350.0",
+    "used": 350.0,
+    "ok": true
+   },
+   {
+    "property": "girder Fu (MPa)",
+    "input_dict": "490.0",
+    "used": 490.0,
+    "ok": true
+   },
+   {
+    "property": "girder density (kN/m3)",
+    "input_dict": "76.4",
+    "used": 78.5,
+    "ok": false
+   },
+   {
+    "property": "deck fck (MPa)",
+    "input_dict": "40.0",
+    "used": 40.0,
+    "ok": true
+   },
+   {
+    "property": "deck Ecm (GPa)",
+    "input_dict": "33.0",
+    "used": 33.0,
+    "ok": true
+   },
+   {
+    "property": "deck density (kN/m3)",
+    "input_dict": "24.5",
+    "used": 25.0,
+    "ok": false
+   }
+  ],
+  "util": {
+   "flexure": {
+    "output_dict": 14.73,
+    "dock_max": 14.73
+   },
+   "shear": {
+    "output_dict": 32.25,
+    "dock_max": 34.95
+   },
+   "interaction": {
+    "output_dict": 14.9,
+    "dock_max": 14.9
+   },
+   "ltb": {
+    "output_dict": 26.61,
+    "dock_max": 26.72
+   },
+   "long_trans_shear": {
+    "output_dict": 18.75,
+    "dock_max": 18.75
+   },
+   "fatigue": {
+    "output_dict": 116.49,
+    "dock_max": 58.24
+   },
+   "stress_limitation": {
+    "output_dict": 18.36,
+    "dock_max": 18.36
+   },
+   "deflection_crack": {
+    "output_dict": 37.33,
+    "dock_max": 37.33
+   }
+  },
+  "util_mismatch": [
+   "shear",
+   "fatigue"
+  ],
+  "cad": {
+   "girder_designed_mm": [
+    1670.0,
+    510.0,
+    22.0,
+    510.0,
+    22.0,
+    10.0
+   ],
+   "girder_drawn_mm": [
+    1670.0,
+    510.0,
+    22.0,
+    510.0,
+    22.0,
+    10.0
+   ],
+   "girder_ok": true,
+   "span_ok": true,
+   "girders_ok": true,
+   "cb_spacing_input_m": 15.0,
+   "cb_spacing_drawn_m": 3.0,
+   "cb_designed_section": "40 x 40 x 3",
+   "cb_drawn": "ANGLE 100x50x8",
+   "info_span_ok": true,
+   "info_width_m": 8.4,
+   "layout_width_m": 8.4
+  }
+ }
+]

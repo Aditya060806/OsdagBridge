@@ -1,0 +1,22 @@
+{
+ "custom_material": {
+  "material.cross_bracing": {
+   "name": "custom_steel_410_540",
+   "typed": {
+    "material.girder.density": "77.0",
+    "material.girder.fy": "410",
+    "material.girder.fu": "540",
+    "material.girder.e": "200",
+    "material.girder.g": "76.9",
+    "material.girder.poisson": "0.3",
+    "material.girder.thermal": "11.7"
+   }
+  }
+ },
+ "design": {
+  "started": true,
+  "seconds": 28.9,
+  "locked_after": true,
+  "popups": []
+ }
+}

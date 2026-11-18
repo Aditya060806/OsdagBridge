@@ -1,0 +1,112 @@
+{
+ "G1": {
+  "dock": {
+   "util.flexure": "17%",
+   "util.shear": "41%",
+   "util.interaction": "17%",
+   "util.ltb": "25%",
+   "util.long_trans_shear": "19%",
+   "util.fatigue": "68%",
+   "util.stress_limitation": "22%",
+   "util.deflection_crack": "42%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 17.130000000000003,
+   "util.shear": 41.010000000000005,
+   "util.interaction": 17.43,
+   "util.ltb": 24.54,
+   "util.long_trans_shear": 18.75,
+   "util.fatigue": 68.30000000000001,
+   "util.stress_limitation": 21.77,
+   "util.deflection_crack": 41.97
+  }
+ },
+ "G2": {
+  "dock": {
+   "util.flexure": "17%",
+   "util.shear": "48%",
+   "util.interaction": "18%",
+   "util.ltb": "24%",
+   "util.long_trans_shear": "19%",
+   "util.fatigue": "69%",
+   "util.stress_limitation": "22%",
+   "util.deflection_crack": "42%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 17.18,
+   "util.shear": 47.58,
+   "util.interaction": 17.560000000000002,
+   "util.ltb": 24.46,
+   "util.long_trans_shear": 18.75,
+   "util.fatigue": 68.52000000000001,
+   "util.stress_limitation": 22.39,
+   "util.deflection_crack": 42.03
+  }
+ },
+ "G3": {
+  "dock": {
+   "util.flexure": "17%",
+   "util.shear": "39%",
+   "util.interaction": "18%",
+   "util.ltb": "24%",
+   "util.long_trans_shear": "19%",
+   "util.fatigue": "70%",
+   "util.stress_limitation": "22%",
+   "util.deflection_crack": "42%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 17.43,
+   "util.shear": 38.76,
+   "util.interaction": 17.62,
+   "util.ltb": 24.43,
+   "util.long_trans_shear": 18.75,
+   "util.fatigue": 69.58,
+   "util.stress_limitation": 21.94,
+   "util.deflection_crack": 42.14
+  }
+ },
+ "G4": {
+  "dock": {
+   "util.flexure": "18%",
+   "util.shear": "39%",
+   "util.interaction": "18%",
+   "util.ltb": "24%",
+   "util.long_trans_shear": "19%",
+   "util.fatigue": "70%",
+   "util.stress_limitation": "22%",
+   "util.deflection_crack": "42%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 17.560000000000002,
+   "util.shear": 39.2,
+   "util.interaction": 17.77,
+   "util.ltb": 24.43,
+   "util.long_trans_shear": 18.75,
+   "util.fatigue": 70.11,
+   "util.stress_limitation": 22.12,
+   "util.deflection_crack": 42.18
+  }
+ },
+ "G5": {
+  "dock": {
+   "util.flexure": "17%",
+   "util.shear": "39%",
+   "util.interaction": "18%",
+   "util.ltb": "24%",
+   "util.long_trans_shear": "19%",
+   "util.fatigue": "70%",
+   "util.stress_limitation": "22%",
+   "util.deflection_crack": "42%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 17.43,
+   "util.shear": 38.76,
+   "util.interaction": 17.669999999999998,
+   "util.ltb": 24.43,
+   "util.long_trans_shear": 18.75,
+   "util.fatigue": 69.58,
+   "util.stress_limitation": 21.94,
+   "util.deflection_crack": 42.14
+  }
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "G1": {
+  "dock": {
+   "util.flexure": "35%",
+   "util.shear": "188%",
+   "util.interaction": "36%",
+   "util.ltb": "38%",
+   "util.long_trans_shear": "40%",
+   "util.fatigue": "148%",
+   "util.stress_limitation": "59%",
+   "util.deflection_crack": "77%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 35.13,
+   "util.shear": 187.82000000000002,
+   "util.interaction": 36.21,
+   "util.ltb": 37.6,
+   "util.long_trans_shear": 40.089999999999996,
+   "util.fatigue": 148.37,
+   "util.stress_limitation": 59.24,
+   "util.deflection_crack": 76.74
+  }
+ },
+ "G2": {
+  "dock": {
+   "util.flexure": "35%",
+   "util.shear": "188%",
+   "util.interaction": "36%",
+   "util.ltb": "38%",
+   "util.long_trans_shear": "40%",
+   "util.fatigue": "148%",
+   "util.stress_limitation": "59%",
+   "util.deflection_crack": "77%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 35.13,
+   "util.shear": 187.82000000000002,
+   "util.interaction": 36.21,
+   "util.ltb": 37.6,
+   "util.long_trans_shear": 40.089999999999996,
+   "util.fatigue": 148.37,
+   "util.stress_limitation": 59.24,
+   "util.deflection_crack": 76.74
+  }
+ },
+ "G3": {
+  "dock": {
+   "util.flexure": "35%",
+   "util.shear": "188%",
+   "util.interaction": "36%",
+   "util.ltb": "38%",
+   "util.long_trans_shear": "40%",
+   "util.fatigue": "148%",
+   "util.stress_limitation": "59%",
+   "util.deflection_crack": "77%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 35.13,
+   "util.shear": 187.82000000000002,
+   "util.interaction": 36.21,
+   "util.ltb": 37.6,
+   "util.long_trans_shear": 40.089999999999996,
+   "util.fatigue": 148.37,
+   "util.stress_limitation": 59.24,
+   "util.deflection_crack": 76.74
+  }
+ },
+ "G4": {
+  "dock": {
+   "util.flexure": "35%",
+   "util.shear": "188%",
+   "util.interaction": "36%",
+   "util.ltb": "38%",
+   "util.long_trans_shear": "40%",
+   "util.fatigue": "148%",
+   "util.stress_limitation": "59%",
+   "util.deflection_crack": "77%"
+  },
+  "get_dcr_for_selection": {
+   "util.flexure": 35.13,
+   "util.shear": 187.82000000000002,
+   "util.interaction": 36.21,
+   "util.ltb": 37.6,
+   "util.long_trans_shear": 40.089999999999996,
+   "util.fatigue": 148.37,
+   "util.stress_limitation": 59.24,
+   "util.deflection_crack": 76.74
+  }
+ }
+}
