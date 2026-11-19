@@ -1,0 +1,36 @@
+\begin{longtable}{@{}L{0.06\textwidth}L{0.42\textwidth}L{0.19\textwidth}L{0.27\textwidth}@{}}
+\caption{Test cases: exact inputs in entry order, outcome of the run and findings.}\label{tab:cases}\\
+\toprule
+\textbf{Case} & \textbf{Exact inputs (in entry order)} & \textbf{Run} & \textbf{Findings} \\
+\midrule\endfirsthead
+\toprule
+\textbf{Case} & \textbf{Exact inputs (in entry order)} & \textbf{Run} & \textbf{Findings} \\
+\midrule\endhead
+\multicolumn{4}{@{}L{0.97\textwidth}@{}}{\textbf{S1}: Basic geometry sweep with database grades, 4 consecutive runs (Ahmedabad, Gujarat)} \\*
+TC01 & span 30, cw 7.5, skew 0 & designed: 4 girders at 2.1 m & \#148 deck SLS; \#151 report tables; \#66 Table 2.7 units; \#147 \\
+TC02 & after unlock: span 40, skew 10, footpath Single Side & designed: 4 girders at 2.569 m & \#147; \#112 (fresh: 5); \#89 \\
+TC03 & after unlock: cw 11, skew -12, median Yes, footpath Both Sides & designed: 4 girders at 6.963 m & 27.85 m deck on 4 girders, shear 188 \%; CAD legend width 26.45 m (\#124); \#147; \#112 (fresh: 12); \#89 \\
+TC04 & after unlock: span 20, cw 7.5, skew 15, median No, footpath None, girder E 250A, CB E 300A, ED E 410A, deck M30 & designed: 4 girders at 2.1 m & span/skew limits 20 m / 15 deg accepted; \#147; \#89 \\
+\multicolumn{4}{@{}L{0.97\textwidth}@{}}{\textbf{S2}: Custom materials for girder, cross bracing, end diaphragm and deck, 4 consecutive runs (Chennai (Minambakkam) (A), Tamil Nadu)} \\*
+TC05 & span 25, cw 7.5, skew 5, girder custom (rho 78.5, Fy 345, Fu 480, E 205, nu 0.3, alpha 12.0), CB custom (rho 77.0, Fy 260, Fu 410, E 200, nu 0.3, alpha 11.7), ED custom (rho 76.9, Fy 300, Fu 440, E 200, nu 0.3, alpha 11.7), deck custom (rho 25.5, fck 42, fctm 3.2, Ecm 33.5, alpha 10.5) & designed: 4 girders at 2.1 m & custom Fy/Fu/E reach analysis; densities not used (\#20, \#41); CB/ED grades unused (\#43); \#147; \#89 \\
+TC06 & after unlock: deck M35, girder custom (rho 80.0, Fy 410, Fu 540, E 210, nu 0.3, alpha 12.0) & designed: 4 girders at 2.1 m & density 80 ignored (\#20); \#147; \#89 \\
+TC07 & after unlock: girder E 350A & designed: 4 girders at 2.1 m & custom to database grade: OK; \#147; \#89 \\
+TC08 & after unlock: girder custom\_steel\_410\_540, CB custom (rho 77.0, Fy 410, Fu 540, E 200, nu 0.3, alpha 11.7) & designed: 4 girders at 2.1 m & name collision: girder E 210 to 200, rho 80 to 77 (\#149); \#147; \#89 \\
+\multicolumn{4}{@{}L{0.97\textwidth}@{}}{\textbf{S3}: Custom design mode, custom girder section, stiffeners, deck and stud inputs, 3 runs (Guwahati (Bhorjar) (A), Assam)} \\*
+TC09 & span 35, cw 9, skew 0, mode Custom, symmetry Girder Unsymmetric, depth 1800, top flange width 450, top flange thickness 25, bottom flange width 550, bottom flange thickness 32, web thickness 14, intermediate stiffener Yes, intermediate stiffener spacing 1800, intermediate stiffener thickness 12, intermediate stiffener outstand 150, bearing stiffener plate thickness 16, bearing stiffener outstand 200, deck thickness 230, thickness 65, diameter 22, height 120, bottom clear cover 40 & designed: 4 girders at 2.475 m & custom section, stiffeners, deck, studs reach design and CAD; \#148, \#151; \#147 \\
+TC10 & after unlock: depth 1600, deck thickness 260, intermediate stiffener spacing 1500 & designed: 4 girders at 2.475 m & Additional Inputs survive unlock; design and CAD agree; \#147 \\
+TC11 & after unlock: span 38 & designed: 4 girders at 2.475 m & deck 260 to 250, stud 22 to 20, cover 40 to 50 (\#71); CAD draws 2120 mm girder (\#150); \#147 \\
+\multicolumn{4}{@{}L{0.97\textwidth}@{}}{\textbf{S4}: Input validation (no design runs)} \\*
+TC12 & nothing entered & no design: Empty Required Fields & blocked, empty fields listed (expected) \\
+TC13 & typed span 19, typed span 46 & 19 shown as 20.0; 46 shown as 45.0 & clamped with warning (expected) \\
+TC14 & typed cw 4.0, typed cw 24, median Yes, typed cw 7.0 & 4.0 shown as 4.25; 24 shown as 23.6; 7.0 shown as 7.5 & clamped with warning (expected) \\
+TC15 & typed skew 20, typed skew -20 & 20 shown as 15.0; -20 shown as -15.0 & clamped with warning (expected) \\
+TC16 & girder custom (rho 30, Fy 1300, Fu 1400, E 200, nu 0.3, alpha 11.7) & saved as custom\_steel\_1200\_1400 after 2 range warnings & clamped with warning (expected) \\
+\multicolumn{4}{@{}L{0.97\textwidth}@{}}{\textbf{S5}: Control: girder layout when the deck width changes between runs (Ahmedabad, Gujarat)} \\*
+TC17 & span 40, cw 11, skew -12, median Yes, footpath Both Sides & designed: 5 girders at 5.57 m & \#147; \#112 (fresh: 12); \#89 \\
+TC18 & after unlock: span 30, cw 7.5, skew 0, median No, footpath None & designed: 5 girders at 1.68 m & \#147; \#112 (fresh: 4) \\
+\multicolumn{4}{@{}L{0.97\textwidth}@{}}{\textbf{S6}: Control: girder count seeded on a wide deck, then the deck is narrowed (Ahmedabad, Gujarat)} \\*
+TC19 & median Yes, footpath Both Sides, span 40, cw 11, skew 0 & designed: 7 girders at 3.979 m & live load dropped, all demands 0, PASS (\#134); util 0.0 (\#45); \#112 (fresh: 12) \\
+TC20 & after unlock: span 30, cw 7.5, median No, footpath None & designed: 7 girders at 1.2 m & \#147; \#112 (fresh: 4) \\
+\bottomrule
+\end{longtable}

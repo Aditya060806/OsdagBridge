@@ -4,6 +4,14 @@ Tested build: `Nidhikhare12/OsdagBridge` `dev` @ `d74f56d`, unmodified, on Windo
 Python 3.12.16 (conda env from `environment.yml`). Everything here lives in `testing/`; no
 production source was changed.
 
+Report: [`report/report.pdf`](report/report.pdf). Issues filed on Nidhikhare12/OsdagBridge:
+[#147](https://github.com/Nidhikhare12/OsdagBridge/issues/147) to
+[#152](https://github.com/Nidhikhare12/OsdagBridge/issues/152), plus comments on
+[#20](https://github.com/Nidhikhare12/OsdagBridge/issues/20),
+[#93](https://github.com/Nidhikhare12/OsdagBridge/issues/93),
+[#112](https://github.com/Nidhikhare12/OsdagBridge/issues/112) and
+[#134](https://github.com/Nidhikhare12/OsdagBridge/issues/134) (links in `issues/published.json`).
+
 ## How the tests drive the application
 `gui_driver.py` starts the real desktop window (`CustomWindow` + `PlateGirderBridge`, the same
 objects `python -m osdagbridge.desktop` creates) and operates it through its widgets: it types into

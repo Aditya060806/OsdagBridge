@@ -1,2 +1,5 @@
 __pycache__/
 ResourceFiles/
+report/*.aux
+report/*.log
+report/*.out

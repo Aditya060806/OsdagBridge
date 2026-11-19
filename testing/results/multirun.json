@@ -7,6 +7,7 @@
   "plots": true,
   "cross_section": true,
   "top_view": true,
+  "geometry_changed": true,
   "info_span_ok": true,
   "cad_rendered": true
  },
@@ -18,6 +19,7 @@
   "plots": true,
   "cross_section": true,
   "top_view": true,
+  "geometry_changed": true,
   "info_span_ok": true,
   "cad_rendered": true
  },
@@ -29,6 +31,7 @@
   "plots": true,
   "cross_section": true,
   "top_view": true,
+  "geometry_changed": true,
   "info_span_ok": true,
   "cad_rendered": true
  },
@@ -40,6 +43,7 @@
   "plots": true,
   "cross_section": false,
   "top_view": false,
+  "geometry_changed": false,
   "info_span_ok": true,
   "cad_rendered": true
  },
@@ -51,6 +55,7 @@
   "plots": false,
   "cross_section": false,
   "top_view": false,
+  "geometry_changed": false,
   "info_span_ok": true,
   "cad_rendered": true
  },
@@ -62,6 +67,7 @@
   "plots": false,
   "cross_section": false,
   "top_view": false,
+  "geometry_changed": false,
   "info_span_ok": true,
   "cad_rendered": true
  },
@@ -73,6 +79,7 @@
   "plots": true,
   "cross_section": true,
   "top_view": true,
+  "geometry_changed": true,
   "info_span_ok": true,
   "cad_rendered": true
  },
@@ -84,6 +91,7 @@
   "plots": true,
   "cross_section": true,
   "top_view": true,
+  "geometry_changed": true,
   "info_span_ok": true,
   "cad_rendered": true
  },
@@ -95,6 +103,7 @@
   "plots": true,
   "cross_section": true,
   "top_view": true,
+  "geometry_changed": true,
   "info_span_ok": true,
   "cad_rendered": true
  },
@@ -106,6 +115,7 @@
   "plots": true,
   "cross_section": true,
   "top_view": true,
+  "geometry_changed": true,
   "info_span_ok": true,
   "cad_rendered": true
  }

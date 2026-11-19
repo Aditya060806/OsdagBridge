@@ -1,7 +1,7 @@
 [Bug] Custom design mode: after a Span change the 3D CAD, edge lines and deck design use the initial-sizing girder, not the user's custom section
 
 ### What happens
-In **Custom** design mode, the input dictionary holds two girder definitions once any required homepage field changes after the section was entered (span, carriageway, median, footpath):
+In **Custom** design mode, the input dictionary holds two girder definitions once a required homepage field changes after the section was entered. I reproduced it by changing the span. Carriageway, median and footpath edits run the same code path (`solve_extend_basic_input_dict()`).
 
 * the per-girder keys `member_properties.girder_details.*.G{n}.M1` keep the user's section (1600 x 450 x 25 / 550 x 32, tw 14);
 * the legacy base keys `member_properties.girder_details.*` are re-seeded with the **initial-sizing** section for the new span (2120 x 640 x 28 / 750 x 32, tw 12).

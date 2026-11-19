@@ -81,6 +81,7 @@ def check_case(d: Path) -> dict:
     meta, dock, mp, cad = (load(d / f"{n}.json") for n in ("meta", "dock", "material_props", "cad_params"))
     info = load(d / "cad_info_table.json")
     r = {"case": d.name, "session": d.parent.name, "designed": bool(out), "meta": meta,
+         "popups_seen": load(d / "popups.json") or [],
          "images": {n: digest(d / f"{n}.png") for n in ("cad3d", "plots", "cross_section", "top_view")},
          "ui_mismatch": [k for k in UI_KEYS if k in ui and not (same(ui[k], inp.get(k)) or
                                                               (ui[k] == "" and inp.get(k) is None))]}
@@ -151,38 +152,181 @@ def esc(v) -> str:
 
 
 def tabular(cols: str, head: list, rows: list) -> str:
+    """Booktabs tabular. Header cells are raw LaTeX; body cells are escaped."""
     body = "\n".join(" & ".join(esc(c) for c in row) + r" \\" for row in rows)
     return (f"\\begin{{tabular}}{{{cols}}}\n\\toprule\n" + " & ".join(rf"\textbf{{{h}}}" for h in head)
             + " \\\\\n\\midrule\n" + body + "\n\\bottomrule\n\\end{tabular}\n")
 
 
+SHORT = {"geometry.span": "span", "geometry.carriageway_width": "cw", "geometry.skew_angle": "skew",
+         "geometry.include_median": "median", "geometry.footpath": "footpath", "material.girder": "girder",
+         "material.cross_bracing": "CB", "material.end_diaphragm": "ED", "material.deck": "deck",
+         "density": "rho", "fy": "Fy", "fu": "Fu", "e": "E", "g": "G", "poisson": "nu", "thermal": "alpha", "ecm": "Ecm"}
+# Analyst notes per case (issue numbers); #89/#112/#147 tags are added automatically from the data.
+NOTES = {
+    "TC01": "#148 deck SLS; #151 report tables; #66 Table 2.7 units",
+    "TC03": "27.85 m deck on 4 girders, shear 188 %; CAD legend width 26.45 m (#124)",
+    "TC04": "span/skew limits 20 m / 15 deg accepted",
+    "TC05": "custom Fy/Fu/E reach analysis; densities not used (#20, #41); CB/ED grades unused (#43)",
+    "TC06": "density 80 ignored (#20)", "TC07": "custom to database grade: OK",
+    "TC08": "name collision: girder E 210 to 200, rho 80 to 77 (#149)",
+    "TC09": "custom section, stiffeners, deck, studs reach design and CAD; #148, #151",
+    "TC10": "Additional Inputs survive unlock; design and CAD agree",
+    "TC11": "deck 260 to 250, stud 22 to 20, cover 40 to 50 (#71); CAD draws 2120 mm girder (#150)",
+    "TC12": "blocked, empty fields listed (expected)", "TC13": "clamped with warning (expected)",
+    "TC14": "clamped with warning (expected)", "TC15": "clamped with warning (expected)",
+    "TC16": "clamped with warning (expected)",
+    "TC19": "live load dropped, all demands 0, PASS (#134); util 0.0 (#45)",
+}
+
+
+def short(key: str) -> str:
+    return SHORT.get(key, SHORT.get(key.split(".")[-1], key.split(".")[-1].replace("_", " ")))
+
+
+def parameters(case: dict) -> str:
+    p = []
+    for group in ("first_combo", "text", "combo"):
+        p += [f"{short(k)} {v}" for k, v in case.get(group, {}).items()]
+    for k, props in case.get("material", {}).items():
+        p.append(f"{short(k)} custom (" + ", ".join(f"{short(pk)} {v}" for pk, v in props.items()) + ")")
+    p += [f"mode {case['mode']}"] if case.get("mode") else []
+    p += [f"{short(k)} {v}" for k, v in case.get("additional", {}).items()]
+    p += [f"typed {short(k)} {v}" for k, v in case.get("probe_text", [])]
+    p += [f"median Yes, typed cw {case['probe_median']}"] if "probe_median" in case else []
+    return ("after unlock: " if case.get("unlock") else "") + (", ".join(p) or "nothing entered")
+
+
+def outcome(c: dict) -> str:
+    if c["designed"]:
+        return f"designed: {c['layout']['girders']} girders at {c['layout']['spacing_m']:.4g} m"
+    probes = c["meta"].get("probe", [])
+    if probes:
+        return "; ".join(f"{p['typed']} shown as {p['shown']}" for p in probes)
+    if c["meta"].get("custom_material"):
+        names = ", ".join(v["name"] for v in c["meta"]["custom_material"].values())
+        return f"saved as {names} after {len(c['popups_seen'])} range warnings"
+    pops = c["meta"].get("design", {}).get("popups", []) or c["popups_seen"]
+    return "no design: " + (", ".join(p["title"] for p in pops) or "--")
+
+
+def findings(c: dict) -> str:
+    tags = [NOTES.get(c["case"], "")]
+    if c["designed"]:
+        f = c["util"]["fatigue"]
+        if f["dock_max"] and abs(f["output_dict"] / f["dock_max"] - 2) < 0.05:
+            tags.append("#147")
+        if c["layout"]["girders"] != c["layout"]["fresh_session_girders"]:
+            tags.append(f"#112 (fresh: {c['layout']['fresh_session_girders']})")
+        if c["layout"]["lines_checked"] == 1:
+            tags.append("#89")
+    return "; ".join(t for t in tags if t)
+
+
+def emit_cases(cases: list):
+    rows = []
+    for s in sorted({c["session"] for c in cases}):
+        spec = load(RESULTS / s / "cases.json")
+        loc = f" ({esc(', '.join(reversed(spec['location'])))})" if spec.get("location") else ""
+        rows.append(rf"\multicolumn{{4}}{{@{{}}L{{0.97\textwidth}}@{{}}}}{{\textbf{{{s}}}: {esc(spec['title'])}{loc}}} \\*")
+        by_id = {k["id"]: k for k in spec["cases"]}
+        for c in (c for c in cases if c["session"] == s):
+            rows.append(" & ".join(esc(x) for x in (c["case"], parameters(by_id[c["case"]]), outcome(c), findings(c))) + r" \\")
+    head = (r"\toprule" "\n" r"\textbf{Case} & \textbf{Exact inputs (in entry order)} & \textbf{Run} & \textbf{Findings} \\"
+            "\n" r"\midrule")
+    (GEN / "cases.tex").write_text(
+        r"\begin{longtable}{@{}L{0.06\textwidth}L{0.42\textwidth}L{0.19\textwidth}L{0.27\textwidth}@{}}" "\n"
+        r"\caption{Test cases: exact inputs in entry order, outcome of the run and findings.}\label{tab:cases}\\" "\n"
+        + head + r"\endfirsthead" "\n" + head + r"\endhead" "\n"
+        + "\n".join(rows) + "\n" r"\bottomrule" "\n" r"\end{longtable}" "\n", encoding="utf-8")
+
+
+def emit_side_by_side():
+    """UI / dialog value vs dictionaries vs value used, for one basic, one material and one custom case."""
+    d = lambda s, c, n: load(RESULTS / s / c / f"{n}.json")
+    # TC01: input dock vs dictionaries (plus the derived layout).
+    ui, inp, be, out = (d("S1", "TC01", n) for n in ("ui", "input_dict", "backend_input", "output_dict"))
+    keys = UI_KEYS + ["typical_section.no_of_girders", "typical_section.girder_spacing", "typical_section.deck_overhang",
+                      "typical_section.deck_thickness"]
+    (GEN / "sbs_tc01.tex").write_text(tabular("@{}llllll@{}", ["Key", "Input dock", "GUI input\\_dict", "backend input", "output\\_dict", ""],
+        [[k, ui.get(k, "(derived)"), inp.get(k), be.get(k), out.get(k), "OK" if same(be.get(k), out.get(k)) else "DIFF"]
+         for k in keys]), encoding="utf-8")
+    # TC05: custom-material dialog vs dictionaries vs analysis.
+    meta, inp, out, mp = (d("S2", "TC05", n) for n in ("meta", "input_dict", "output_dict", "material_props"))
+    s, c = mp["steel_prop"], mp["concrete_prop"]
+    used = {"girder": {"density": s["rho"] / 1e3, "fy": s["Fy"] / 1e6, "fu": s["Fu"] / 1e6, "e": s["E"] / 1e9,
+                       "poisson": s["v"], "g": s["E"] / 1e9 / (2 * (1 + s["v"]))},   # isotropic G from E, nu
+            "deck": {"fck": c["fck"], "fctm": c["fctm"], "ecm": c["Ecm"], "density": WET_CONCRETE_DENSITY}}
+    rows = []
+    for key, info in meta["custom_material"].items():
+        member = key.split(".")[1]
+        for fk, typed in info["typed"].items():
+            prop = fk.split(".")[-1]
+            u = used.get(member, {}).get(prop, "not used")
+            rows.append([f"{member} {short(prop)}", typed, inp.get(f"material.{member}.{prop}"),
+                         out.get(f"material.{member}.{prop}"), round(u, 3) if isinstance(u, float) else u,
+                         "OK" if same(typed, u, 1e-3) else "DIFF"])
+    (GEN / "sbs_tc05.tex").write_text(tabular("@{}llllll@{}", ["Property", "Dialog", "input\\_dict", "output\\_dict",
+                                                         "Used by analysis", ""], rows), encoding="utf-8")
+    # TC09: Additional Inputs (Custom mode) vs dictionaries vs designer vs 3D CAD.
+    meta, inp, be, out, cad = (d("S3", "TC09", n) for n in ("meta", "input_dict", "backend_input", "output_dict", "cad_params"))
+    dr, st = out["design_results"], cad["stiffeners_dict"]["0"]
+    target = {"depth": (dr["D_mm"], cad["girder_section_d"]), "top flange width": (dr["bf_top_mm"], cad["girder_section_bf"]),
+              "top flange thickness": (dr["tf_top_mm"], cad["girder_section_tf"]),
+              "bottom flange width": (dr["bf_bot_mm"], cad["girder_section_bf_b"]),
+              "bottom flange thickness": (dr["tf_bot_mm"], cad["girder_section_tf_b"]),
+              "web thickness": (dr["tw_mm"], cad["girder_section_tw"]),
+              "intermediate stiffener spacing": (dr.get("is_c_mm"), st["intermediate_stiffener_spacing"]),
+              "intermediate stiffener thickness": (dr.get("is_tq_mm"), st["intermediate_stiffener_thickness"]),
+              "bearing stiffener plate thickness": (dr.get("bs_tq_mm"), st["end_stiffener_thickness"]),
+              "deck thickness": (dr["slab_thickness_mm"], cad["deck_thickness"]),
+              "diameter": (dr["stud_dia_mm"], cad["shear_stud_params"]["base_diameter"]),
+              "height": (dr["stud_height_mm"], cad["shear_stud_params"]["base_height"])}
+    rows = []
+    for k, typed in meta["additional"].items():
+        name = short(k)
+        if name not in target:
+            continue
+        gk = f"{k}.G1.M1" if f"{k}.G1.M1" in inp else k
+        rows.append([name, typed, inp.get(gk), be.get(gk), out.get(gk), *target[name]])
+    (GEN / "sbs_tc09.tex").write_text(tabular("@{}lllllll@{}", ["Field (mm)", "Entered", "GUI input\\_dict", "backend (SI)",
+                                                          "output\\_dict", "Designer", "3D CAD"], rows), encoding="utf-8")
+
+
 def emit(cases: list):
     GEN.mkdir(parents=True, exist_ok=True)
+    emit_cases(cases)
+    emit_side_by_side()
     designed = [c for c in cases if c["designed"]]
-    flag = lambda ok: "OK" if ok else "MISMATCH"
+    flag = lambda ok: "OK" if ok else "DIFF"
+    util_short = dict(zip(UTIL, ["flex", "shear", "inter", "LTB", "long.sh", "fatigue", "stress", "defl"]))
     (GEN / "dict_consistency.tex").write_text(tabular(
-        "llllll", ["Case", "UI = input\\_dict", "input = backend = output", "Materials used", "Output = Dock", "CAD girder"],
+        "@{}llllll@{}", ["Case", "UI = input", "in = backend = out", "Not used as entered", "Output $\\ne$ Dock", "CAD girder"],
         [[c["case"], flag(not c["ui_mismatch"]), flag(not c["dict_mismatch"]),
-          ", ".join(m["property"].split(" (")[0] for m in c["materials"] if not m["ok"]) or "OK",
-          ", ".join(c["util_mismatch"]) or "OK", flag(c.get("cad", {}).get("girder_ok", True))] for c in designed]),
-        encoding="utf-8")
+          ", ".join(m["property"].split(" (")[0].replace("density", "rho") for m in c["materials"] if not m["ok"]) or "OK",
+          ", ".join(util_short[u] for u in c["util_mismatch"]) or "OK", flag(c.get("cad", {}).get("girder_ok", True))]
+         for c in designed]), encoding="utf-8")
     (GEN / "layout.tex").write_text(tabular(
-        "lrrrrrl", ["Case", "Girders", "Spacing (m)", "Overhang (m)", "Fresh session", "Lines checked", "Controlling"],
+        "@{}lrrrrrl@{}", ["Case", "Girders", "Spacing (m)", "Overhang (m)", "Fresh session", "Lines checked", "Controlling"],
         [[c["case"], c["layout"]["girders"], c["layout"]["spacing_m"], c["layout"]["overhang_m"],
           c["layout"]["fresh_session_girders"], c["layout"]["lines_checked"], c["layout"]["controlling"]] for c in designed]),
         encoding="utf-8")
     (GEN / "util.tex").write_text(tabular(
-        "l" + "r" * 8, ["Case"] + ["Flex", "Shear", "Inter", "LTB", "LongSh", "Fatigue", "Stress", "Defl"],
+        "@{}l" + "r" * 8 + "@{}", ["Case"] + ["Flex", "Shear", "Inter", "LTB", "LongSh", "Fatigue", "Stress", "Defl"],
         [[c["case"]] + [f"{c['util'][u]['output_dict']:.1f} / {c['util'][u]['dock_max']:.1f}"
                         if c["util"][u]["dock_max"] is not None else f"{c['util'][u]['output_dict']:.1f} / --"
                         for u in UTIL] for c in designed]), encoding="utf-8")
+    dims = lambda v: r"\texttimes ".join(f"{x:.0f}" for x in v)
+    section = lambda s: str(s).replace(" x ", "x").replace("ANGLE ", "L").replace("x", r"\texttimes ")
+    two = lambda a, b: rf"\makecell[l]{{{a}\\{b}}}"
     (GEN / "cad.tex").write_text(tabular(
-        "llllll", ["Case", "Girder designed (mm)", "Girder drawn (mm)", "CB spacing in/drawn (m)", "CB section designed / drawn",
-                   "Width info/layout (m)"],
-        [[c["case"], "x".join(f"{v:.0f}" for v in c["cad"]["girder_designed_mm"]),
-          "x".join(f"{v:.0f}" for v in c["cad"]["girder_drawn_mm"]),
+        "@{}llllll@{}",
+        ["Case", two("Girder designed", "(mm)"), two("Girder drawn", "(mm)"), two("CB spacing (m)", "input / drawn"),
+         two("CB section", "designed / drawn"), two("Width (m)", "legend / layout")],
+        [[c["case"], dims(c["cad"]["girder_designed_mm"]),
+          "same" if c["cad"]["girder_ok"] else dims(c["cad"]["girder_drawn_mm"]),
           f"{esc(c['cad']['cb_spacing_input_m'])} / {c['cad']['cb_spacing_drawn_m']:.1f}",
-          f"{c['cad']['cb_designed_section']} / {c['cad']['cb_drawn']}",
+          f"{section(c['cad']['cb_designed_section'])} / {section(c['cad']['cb_drawn'])}",
           f"{c['cad']['info_width_m']} / {c['cad']['layout_width_m']}"] for c in designed if "cad" in c]),
         encoding="utf-8")
 
@@ -190,12 +334,17 @@ def emit(cases: list):
 def multirun(cases: list) -> list:
     """Consecutive runs in one session: did every graphical output change, and is the CAD
     info table showing this run's span?"""
+    def geometry(c):           # CAD DTO without the material grades
+        p = load(RESULTS / c["session"] / c["case"] / "cad_params.json")
+        return {k: v for k, v in p.items() if k not in ("steel_grade", "concrete_grade")}
+
     rows = []
     for prev, cur in zip(cases, cases[1:]):
         if prev["session"] != cur["session"] or not (prev["designed"] and cur["designed"]):
             continue
         changed = {n: cur["images"][n] is not None and cur["images"][n] != prev["images"][n] for n in cur["images"]}
         rows.append({"session": cur["session"], "from": prev["case"], "to": cur["case"], **changed,
+                     "geometry_changed": geometry(prev) != geometry(cur),
                      "info_span_ok": cur.get("cad", {}).get("info_span_ok"),
                      "cad_rendered": (RESULTS / cur["session"] / cur["case"] / "cad3d.png").stat().st_size > 20_000})
     return rows
@@ -207,10 +356,12 @@ def main():
     (RESULTS / "multirun.json").write_text(json.dumps(runs, indent=1), encoding="utf-8")
     (GEN / "multirun.tex").parent.mkdir(parents=True, exist_ok=True)
     yn = lambda v: "yes" if v else "NO"
+    refreshed = lambda r, ok: ("yes" if ok else "NO") if r["geometry_changed"] else ("same*" if not ok else "yes")
     (GEN / "multirun.tex").write_text(tabular(
-        "lllllll", ["Session", "Run", "3D CAD shown", "3D changed", "Plots changed", "2D views changed", "CAD span = input"],
-        [[r["session"], f"{r['from']} to {r['to']}", yn(r["cad_rendered"]), yn(r["cad3d"]), yn(r["plots"]),
-          yn(r["cross_section"] and r["top_view"]), yn(r["info_span_ok"])] for r in runs]), encoding="utf-8")
+        "@{}lllllll@{}", ["Session", "Run", "Geometry changed", "3D shown", "Legend span OK", "Plots", "2D views"],
+        [[r["session"], f"{r['from']} to {r['to']}", "yes" if r["geometry_changed"] else "no",
+          yn(r["cad_rendered"]), yn(r["info_span_ok"]),
+          refreshed(r, r["plots"]), refreshed(r, r["cross_section"] and r["top_view"])] for r in runs]), encoding="utf-8")
     (RESULTS / "verification.json").write_text(json.dumps(cases, indent=1, default=str), encoding="utf-8")
     emit(cases)
     for c in cases:

@@ -23,6 +23,7 @@
     ]
    }
   },
+  "popups_seen": [],
   "images": {
    "cad3d": "5be22c1e412e96a8c2e64b31672772a7",
    "plots": "2602154d7ed2ca76bddafa76b8891ab2",
@@ -208,6 +209,18 @@
     "popups": []
    }
   },
+  "popups_seen": [
+   {
+    "title": "Report Generated Successfully",
+    "text": "PDF report saved to:\nD:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S1\\TC01\\report\\TC01_report.pdf",
+    "info": "TeX source: D:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S1\\TC01\\report\\TC01_report.tex"
+   },
+   {
+    "title": "Clear Results",
+    "text": "Unlocking will delete all results and plots.",
+    "info": "Do you want to continue?"
+   }
+  ],
   "images": {
    "cad3d": "e7b54c6478cf86bdccfef9a0ea29e75d",
    "plots": "517be656ee500ced82bc57090dc58e4f",
@@ -346,6 +359,13 @@
     "popups": []
    }
   },
+  "popups_seen": [
+   {
+    "title": "Clear Results",
+    "text": "Unlocking will delete all results and plots.",
+    "info": "Do you want to continue?"
+   }
+  ],
   "images": {
    "cad3d": "a8f9ef331c2c4dccb461bd6a5e9c62b0",
    "plots": "6d4ad1eb469afda8087743040ddd04b4",
@@ -484,6 +504,13 @@
     "popups": []
    }
   },
+  "popups_seen": [
+   {
+    "title": "Clear Results",
+    "text": "Unlocking will delete all results and plots.",
+    "info": "Do you want to continue?"
+   }
+  ],
   "images": {
    "cad3d": "e36c7fc405cfc4e5dc5aadbe236b5a01",
    "plots": "d388711495623ef8dfd20f0403229d76",
@@ -670,6 +697,7 @@
     "popups": []
    }
   },
+  "popups_seen": [],
   "images": {
    "cad3d": "861656b87a66fe489d26f3a03f9a84ca",
    "plots": "317ed26f48444596c4306b55e2aa0cce",
@@ -822,6 +850,13 @@
     "popups": []
    }
   },
+  "popups_seen": [
+   {
+    "title": "Clear Results",
+    "text": "Unlocking will delete all results and plots.",
+    "info": "Do you want to continue?"
+   }
+  ],
   "images": {
    "cad3d": "3f691287c2c385358d71c4fbd53b86b4",
    "plots": "4bf3eeee29af82e6ae0630f3cd0130ef",
@@ -960,6 +995,13 @@
     "popups": []
    }
   },
+  "popups_seen": [
+   {
+    "title": "Clear Results",
+    "text": "Unlocking will delete all results and plots.",
+    "info": "Do you want to continue?"
+   }
+  ],
   "images": {
    "cad3d": "ea91aab2120ba4979addea59f099dfa7",
    "plots": "4bf3eeee29af82e6ae0630f3cd0130ef",
@@ -1112,6 +1154,13 @@
     "popups": []
    }
   },
+  "popups_seen": [
+   {
+    "title": "Clear Results",
+    "text": "Unlocking will delete all results and plots.",
+    "info": "Do you want to continue?"
+   }
+  ],
   "images": {
    "cad3d": "4cb74b8f683ed593d00985170c59dabc",
    "plots": "4bf3eeee29af82e6ae0630f3cd0130ef",
@@ -1282,6 +1331,18 @@
     ]
    }
   },
+  "popups_seen": [
+   {
+    "title": "Applied",
+    "text": "Stiffener configuration copied to all girders/members.",
+    "info": ""
+   },
+   {
+    "title": "Saved",
+    "text": "Inputs saved successfully.",
+    "info": ""
+   }
+  ],
   "images": {
    "cad3d": "470a1cc6feb4606571c3734bc290f15d",
    "plots": "b6d1a99695f192e1d9a7107ff83d90ed",
@@ -1473,6 +1534,23 @@
     "popups": []
    }
   },
+  "popups_seen": [
+   {
+    "title": "Report Generated Successfully",
+    "text": "PDF report saved to:\nD:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S3\\TC09\\report\\TC09_report.pdf",
+    "info": "TeX source: D:\\Endeavors\\Coding\\Projects\\Osdag\\OsdagBridge\\testing\\results\\S3\\TC09\\report\\TC09_report.tex"
+   },
+   {
+    "title": "Clear Results",
+    "text": "Unlocking will delete all results and plots.",
+    "info": "Do you want to continue?"
+   },
+   {
+    "title": "Saved",
+    "text": "Inputs saved successfully.",
+    "info": ""
+   }
+  ],
   "images": {
    "cad3d": "13d190a45aeb8eb61e300c1bbdcf7bad",
    "plots": "27d526a0def93b08ac7ebe0d4ad00202",
@@ -1613,6 +1691,13 @@
     "popups": []
    }
   },
+  "popups_seen": [
+   {
+    "title": "Clear Results",
+    "text": "Unlocking will delete all results and plots.",
+    "info": "Do you want to continue?"
+   }
+  ],
   "images": {
    "cad3d": "6f0a13603702cbabb402f05e634a2486",
    "plots": "85557d2871cbb2d768a670ea88749ccf",
@@ -1758,6 +1843,13 @@
     ]
    }
   },
+  "popups_seen": [
+   {
+    "title": "Empty Required Fields",
+    "text": "Please fill in the required(*) fields before proceeding:\n - Project Location\n - Span (m)\n - Carriageway Width (Each way) (m)\n",
+    "info": ""
+   }
+  ],
   "images": {
    "cad3d": null,
    "plots": null,
@@ -1784,6 +1876,18 @@
     }
    ]
   },
+  "popups_seen": [
+   {
+    "title": "Input Error",
+    "text": "Span must be between 20.0 m and 45.0 m (software limitation).",
+    "info": ""
+   },
+   {
+    "title": "Input Error",
+    "text": "Span must be between 20.0 m and 45.0 m (software limitation).",
+    "info": ""
+   }
+  ],
   "images": {
    "cad3d": null,
    "plots": null,
@@ -1816,6 +1920,23 @@
     }
    ]
   },
+  "popups_seen": [
+   {
+    "title": "Input Error",
+    "text": "Minimum carriageway width required is 4.25 m as per IRC 5:2015 Clause 104.3.1.",
+    "info": ""
+   },
+   {
+    "title": "Input Error",
+    "text": "Carriageway width exceeds 23.6 m (software limitation).",
+    "info": ""
+   },
+   {
+    "title": "Input Error",
+    "text": "Minimum carriageway width required is 7.50 m as per IRC 5:2015 Clause 104.3.1.",
+    "info": ""
+   }
+  ],
   "images": {
    "cad3d": null,
    "plots": null,
@@ -1842,6 +1963,18 @@
     }
    ]
   },
+  "popups_seen": [
+   {
+    "title": "Input Error",
+    "text": "Skew angle must be between -15.0\u00b0 and 15.0\u00b0.",
+    "info": ""
+   },
+   {
+    "title": "Input Error",
+    "text": "Skew angle must be between -15.0\u00b0 and 15.0\u00b0.",
+    "info": ""
+   }
+  ],
   "images": {
    "cad3d": null,
    "plots": null,
@@ -1870,6 +2003,18 @@
     }
    }
   },
+  "popups_seen": [
+   {
+    "title": "Input Error",
+    "text": "Weight Density must be between 50.0 and 120.0 kN/m\u00b3.",
+    "info": ""
+   },
+   {
+    "title": "Input Error",
+    "text": "Yield Strength, Fy must be between 100.0 and 1200.0 MPa.",
+    "info": ""
+   }
+  ],
   "images": {
    "cad3d": null,
    "plots": null,
@@ -1890,6 +2035,7 @@
     "popups": []
    }
   },
+  "popups_seen": [],
   "images": {
    "cad3d": "3de67ba3fec51d98150e6afecd019b2f",
    "plots": "9189c0ff05ef311b6e25dbab4e33baeb",
@@ -2028,6 +2174,13 @@
     "popups": []
    }
   },
+  "popups_seen": [
+   {
+    "title": "Clear Results",
+    "text": "Unlocking will delete all results and plots.",
+    "info": "Do you want to continue?"
+   }
+  ],
   "images": {
    "cad3d": "97a0839b6c456b0af35d91969684adf3",
    "plots": "051f0b5bf7e27f581625c1b469f7cd73",
@@ -2167,6 +2320,7 @@
     "popups": []
    }
   },
+  "popups_seen": [],
   "images": {
    "cad3d": "084ccb78a7136a0be7e329d4f85b29c1",
    "plots": "75febee47d9aaa8206ed3287b25dab55",
@@ -2308,6 +2462,13 @@
     "popups": []
    }
   },
+  "popups_seen": [
+   {
+    "title": "Clear Results",
+    "text": "Unlocking will delete all results and plots.",
+    "info": "Do you want to continue?"
+   }
+  ],
   "images": {
    "cad3d": "24f92ffc82cebf630720b8283f2a2df8",
    "plots": "331602bd2586ce1fd075341dc9c4ac63",
