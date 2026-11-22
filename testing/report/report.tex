@@ -67,6 +67,7 @@ Build tested & \texttt{Nidhikhare12/OsdagBridge}, branch \texttt{dev} @ \texttt{
 Platform & Windows 11 (Intel RaptorLake GPU, OpenGL 4.6), Miniconda 26.9.4, Python 3.12.16, PySide6 6.11.3 \\
 Test repository & \href{https://github.com/Aditya060806/OsdagBridge/tree/screening-testing/testing}{\nolinkurl{github.com/Aditya060806/OsdagBridge/tree/screening-testing/testing}} (collaborator: Nidhikhare12) \\
 Issues filed & \issue{147}, \issue{148}, \issue{149}, \issue{150}, \issue{151}, \issue{152}; comments on \issue{20}, \issue{93}, \issue{112}, \issue{134} \\
+Pull request & \issue{235}: fix and regression test for \issue{148} (open) \\
 Test cases & 20 cases in 6 sessions: 15 design runs, 10 consecutive redesigns, 5 validation cases, 2 design reports, 20 \texttt{.osi} files \\
 Screencast & \ev{results/demo/osdagbridge_testing_demo.mp4} (2 min 13 s, silent) \\
 \bottomrule
@@ -110,7 +111,8 @@ Footpath change without a traceback & -- & 9/9 changes & \issue{152} \\
 \item \textbf{Two calculation errors.} The girder fatigue stress range is doubled, so the output dictionary and the report give a
   fatigue utilisation above 100\,\% in all 14 designs with a fatigue check, while the Output Dock shows half of it
   (TC01: report UR 1.58 FAIL, dock 0.79 PASS; \issue{147}). The deck slab SLS checks use $E_{cm}$ in GPa as if it were MPa:
-  modular ratio 6061 instead of 6.06, concrete stress 4$\times$ too low, crack width 25\,\% too low (\issue{148}).
+  modular ratio 6061 instead of 6.06, concrete stress 4$\times$ too low, crack width 25\,\% too low (\issue{148}; fix proposed
+  in \issue{235}).
 \item \textbf{State carried between runs.} A second custom steel with the same Fy/Fu silently overwrites the first member's E
   and density (\issue{149}); after a span change in Custom mode the CAD, edge lines and deck use the initial-sizing girder
   instead of the user's section (\issue{150}); the girder count is seeded once and only re-spaced (\issue{112}).
@@ -136,7 +138,7 @@ GUI, variables and graphics update; no stale data & Per-run comparison with the 
 Input and output dictionaries & UI vs input dict vs backend input vs output dict; output dict vs Output Dock vs report & \S\ref{sec:dicts}, \S\ref{sec:outputs} \\
 All steel components and the deck & Girders, stiffeners, cross bracing, end diaphragm, shear studs, deck slab (Table~\ref{tab:coverage}) & \S\ref{sec:method} \\
 Test-case log (pass and fail) with exact parameters & 20 cases with exact inputs in entry order and outcome & \S\ref{sec:cases} \\
-GitHub issues with code-level fixes, no duplicates & 6 new issues, 4 comments; root cause with file and line, proposed code & \S\ref{sec:issues} \\
+GitHub issues with code-level fixes, no duplicates & 6 new issues, 5 comments, 1 pull request; root cause with file and line, proposed code & \S\ref{sec:issues} \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -254,7 +256,7 @@ application code. Figure~\ref{fig:harness} shows its structure.
   \node[box,text width=40mm] (probe) at (0.6,-5.2) {\textbf{probes/ + replay.py}\\\scriptsize headless replay of a captured dict; isolate one defect};
   \node[box,text width=40mm] (osi) at (5.8,-5.2) {\textbf{export\_osi.py}\\\scriptsize 20 \texttt{.osi} files, re-validated};
   \node[store,text width=40mm] (gen) at (-5.2,-7.8) {report/generated/*.tex\\\scriptsize verification.json};
-  \node[box,text width=40mm] (iss) at (0.6,-7.8) {\textbf{issues/*.md} $\rightarrow$ \textbf{publish.py}\\\scriptsize GitHub \#147--\#152, 4 comments};
+  \node[box,text width=40mm] (iss) at (0.6,-7.8) {\textbf{issues/*.md} $\rightarrow$ \textbf{publish.py}\\\scriptsize GitHub \#147--\#152, 5 comments};
   \node[store,text width=40mm] (osif) at (5.8,-7.8) {osi/S*\_TC*.osi};
   \node[box,text width=40mm] (rep) at (-5.2,-10.2) {\textbf{this report}\\\scriptsize LaTeX};
   \node[box,text width=50mm] (vid) at (0.6,-10.2) {\textbf{demo\_video.py}, \textbf{evidence\_shots.py}\\\scriptsize screencast, issue screenshots};
@@ -496,13 +498,14 @@ and~\ref{fig:dialogs} show the other graphical outputs.
 
 % =====================================================================
 \section{Issues raised}\label{sec:issues}
-Table~\ref{tab:issues} lists the six new issues and four comments. Each issue on GitHub gives the exact inputs, the captured
+Table~\ref{tab:issues} lists the six new issues, the five comments on existing issues and the pull request for \#148. Each
+issue on GitHub gives the exact inputs, the captured
 dictionaries and probe output as evidence, the root cause with source links pinned to \texttt{d74f56d}, a suggested fix and a
 duplicate check. The subsections below summarise each one.
 
 {\small
 \begin{longtable}{@{}L{0.07\linewidth}L{0.38\linewidth}L{0.49\linewidth}@{}}
-\caption{Issues filed and comments posted on Nidhikhare12/OsdagBridge.}\label{tab:issues}\\
+\caption{Issues filed, comments posted and pull request opened on Nidhikhare12/OsdagBridge.}\label{tab:issues}\\
 \toprule
 \textbf{Issue} & \textbf{Defect} & \textbf{Root cause and proposed fix} \\
 \midrule\endfirsthead
@@ -523,9 +526,13 @@ duplicate check. The subsections below summarise each one.
 \texttt{input\_dock.py} L666 calls a method removed in \texttt{cacaada}. Delete the call. \\
 \midrule
 \issue{20} & Comment: self-weight never uses \texttt{steel\_prop.rho} & \texttt{analyser.py} L416 uses the 78.5 constant. \\
+\issue{20} & Comment: correction of identifiers cited in a later comment & No \texttt{steel\_density} key exists;
+\texttt{SteelProperties} is frozen; the self-weight ignores \texttt{rho}. \\
 \issue{93} & Comment: CB and ED sections hard-coded in CAD & \texttt{plategirderbridge.py} L3368--3369, L3590--3625. \\
 \issue{112} & Comment: median/footpath changes and consecutive runs & 7 m spacing accepted; 7 girders kept on 8.4 m. \\
 \issue{134} & Comment: GUI reproduction at cw 11 m & Dock and output dict disagree when the live load is dropped. \\
+\midrule
+\issue{235} & Pull request: fix for \#148 & \texttt{Ecm * 1000.0} at the \texttt{deckdesign} call, with a regression test. \\
 \bottomrule
 \end{longtable}}
 
@@ -567,6 +574,9 @@ L146). \src{deckdesign.py} L429--430 documents MPa and \texttt{\_cracked\_sectio
 # plategirderbridge.py, design_deck_slab()
 Ecm = self.material_props.concrete_prop.Ecm * 1000.0   # GPa -> MPa (deckdesign expects MPa)
 \end{Verbatim}
+\textbf{Fix.} Pull request \issue{235} makes this change and adds \texttt{tests/unit/test\_deck\_ecm\_units.py}, which fails on
+\texttt{dev} and passes with the fix. Full designs of TC01, TC05 and TC09 on the fix branch reproduce the right-hand column
+above. Every deck check still passes (highest UR 0.99), and the girder utilisations do not change.
 
 \subsection{\#149 Two custom steels with the same Fy/Fu collide}
 \textbf{Works / fails.} Works while every custom steel has a distinct Fy/Fu pair. Fails when two coincide: TC06 girder custom
@@ -650,6 +660,9 @@ now refreshes the footpath sub-tabs itself when opened.\\
 \item \issue{112}: girder count after median and footpath changes and across consecutive runs (TC03, TC17--TC20).
 \item \issue{134}: a GUI reproduction at carriageway 11 m in which the live load is dropped, all demands are zero and the dock and
   output dictionary disagree (TC19).
+\item \issue{20} (22 November): a correction to a later comment. That comment cited \texttt{steel\_density},
+  \texttt{KEY\_STEEL\_DENSITY} and \texttt{steel\_prop.density}, which do not exist at \texttt{d74f56d}, and proposed
+  overwriting a field of the frozen \texttt{SteelProperties}, which raises \texttt{FrozenInstanceError}.
 \end{itemize}
 
 \subsection{Duplicate check}
@@ -660,6 +673,20 @@ issues opened since, up to \#230. None duplicates mine. Two later ones are relat
 labels $E_{cm}$ in GPa as MPa; my \#148 is the deck design calculation itself) and \issue{177} (the shear fatigue limit; my
 \#147 is the doubled stress range).
 
+\subsection{Activity since filing (to 22 November 2026)}
+\begin{itemize}
+\item \issue{148} was reproduced independently on macOS on 20 November, with the same modular ratio and neutral axis. The
+  reporter filed the Results Table export part of the same unit error as \issue{171}. I opened \issue{235} with the fix.
+\item \issue{20}: another tester's GUI run (22 November) shows \texttt{rho} = 78500 and an unchanged self-weight for a
+  78 kN/m\textsuperscript{3} custom steel, which confirms that the density must also reach the self-weight load.
+\item \issue{112}: open pull request \issue{220} re-seeds the girder count whenever the overall deck width changes. Its
+  tests include median and footpath changes, the cases in my comment.
+\item \issue{151} is cited as related by \issue{216} (cross-bracing report tables) and \issue{223} (saved \texttt{.osi}
+  section properties).
+\item The maintainer has not yet replied to, labelled or assigned \issue{147}--\issue{152}.
+\end{itemize}
+
+\needspace{14\baselineskip}
 \section{Deliverables}
 \begin{table}[htbp]
 \small
@@ -672,6 +699,7 @@ Test-case \texttt{.osi} files & \ev{osi} (20 files, all pass \texttt{validate\_o
 Per-case evidence & \ev{results} (dictionaries, dock values, CAD parameters, screenshots, logs) \\
 Root-cause probes & \ev{probes} with outputs in \texttt{probes/output/} \\
 Issue texts & \ev{issues} and \texttt{issues/published.json} (links) \\
+Fix for \#148 & Pull request \issue{235}, branch \texttt{fix/148-deck-ecm-mpa} on the fork \\
 This report & \ev{report/report.pdf} (LaTeX source \texttt{report.tex}) \\
 Screencast & \ev{results/demo/osdagbridge_testing_demo.mp4}: custom material run, consecutive runs, 3D CAD and plots \\
 \bottomrule

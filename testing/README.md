@@ -11,6 +11,7 @@ Report: [`report/report.pdf`](report/report.pdf). Issues filed on Nidhikhare12/O
 [#93](https://github.com/Nidhikhare12/OsdagBridge/issues/93),
 [#112](https://github.com/Nidhikhare12/OsdagBridge/issues/112) and
 [#134](https://github.com/Nidhikhare12/OsdagBridge/issues/134) (links in `issues/published.json`).
+Fix for #148: [PR #235](https://github.com/Nidhikhare12/OsdagBridge/pull/235).
 
 ## How the tests drive the application
 `gui_driver.py` starts the real desktop window (`CustomWindow` + `PlateGirderBridge`, the same
