@@ -1,0 +1,12 @@
+# designer.py, _extract_demands_from_analysis_results(), step (4)
+f = analysis_results.ds.forces.sel(Loadcase=_sls_frequent_lcs, Element=elements)
+
+def _section_range(comp):
+    """max - min over the frequent combinations at the worst section (internal-force sign)."""
+    i_end = np.asarray(f.sel(Component=f"{comp}_i").values, float)
+    j_end = -np.asarray(f.sel(Component=f"{comp}_j").values, float)   # j-end to i-end sign
+    sec = np.concatenate([i_end, j_end], axis=1)                       # (load case, section)
+    return float(np.nanmax(np.maximum(np.nanmax(sec, 0), 0.0) - np.minimum(np.nanmin(sec, 0), 0.0)))
+
+stress_range_MPa = _section_range("Mz") * 1000.0 / Ze_comp_bot_mm3
+shear_range_MPa  = _section_range("Vy") / Aw_mm2

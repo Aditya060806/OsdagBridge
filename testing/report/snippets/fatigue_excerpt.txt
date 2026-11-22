@@ -1,0 +1,6 @@
+> python probes/probe_fatigue_range.py results/S1/TC01/input_dict.json
+girder  max Mz_i  min Mz_i  max Mz_j  min Mz_j  designer range  max |M| per LC  ratio   (kN.m)
+G3        2115.4       0.0      -0.0   -2115.4          4230.8          2115.4  2.000
+        check 8: stress range 145.86 MPa / f_fd 92.49 MPa = UR 1.577
+                 with internal sign: 72.93 MPa, UR 0.789
+output_dict util.fatigue (report) = 157.70 %
