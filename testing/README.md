@@ -28,7 +28,8 @@ the evidence listed below. Designs run on the application's own worker thread.
 | `replay.py` | runs the backend headless on a captured `input_dict.json` |
 | `probes/` | root-cause probes for the reported bugs (outputs in `probes/output/`) |
 | `export_osi.py` | writes every case as an `.osi` file to `osi/` and re-validates it |
-| `evidence_shots.py`, `demo_video.py` | issue screenshots; silent screencast `results/demo/osdagbridge_testing_demo.mp4` |
+| `evidence_shots.py`, `demo_video.py` | issue screenshots; silent GUI screencast `results/demo/osdagbridge_testing_demo.mp4` |
+| `demo_submission.py` | silent submission video `results/demo/osdagbridge_submission_demo.mp4`: the GUI screencast, then the root-cause probes, the PR #235 test (fails on `dev`, passes with the fix) and the issues, all run live |
 | `issues/` | text of the GitHub issues and comments that were filed |
 | `report/` | LaTeX source and PDF of the testing report |
 

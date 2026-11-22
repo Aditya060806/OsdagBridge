@@ -69,7 +69,8 @@ Test repository & \href{https://github.com/Aditya060806/OsdagBridge/tree/screeni
 Issues filed & \issue{147}, \issue{148}, \issue{149}, \issue{150}, \issue{151}, \issue{152}; comments on \issue{20}, \issue{93}, \issue{112}, \issue{134} \\
 Pull request & \issue{235}: fix and regression test for \issue{148} (open) \\
 Test cases & 20 cases in 6 sessions: 15 design runs, 10 consecutive redesigns, 5 validation cases, 2 design reports, 20 \texttt{.osi} files \\
-Screencast & \ev{results/demo/osdagbridge_testing_demo.mp4} (2 min 13 s, silent) \\
+Screencast & \ev{results/demo/osdagbridge_submission_demo.mp4} (4 min 23 s, silent): GUI test run, root-cause probes and
+the \issue{235} regression test \\
 \bottomrule
 \end{tabularx}
 
@@ -701,7 +702,10 @@ Root-cause probes & \ev{probes} with outputs in \texttt{probes/output/} \\
 Issue texts & \ev{issues} and \texttt{issues/published.json} (links) \\
 Fix for \#148 & Pull request \issue{235}, branch \texttt{fix/148-deck-ecm-mpa} on the fork \\
 This report & \ev{report/report.pdf} (LaTeX source \texttt{report.tex}) \\
-Screencast & \ev{results/demo/osdagbridge_testing_demo.mp4}: custom material run, consecutive runs, 3D CAD and plots \\
+Screencast & \ev{results/demo/osdagbridge_submission_demo.mp4} (silent, 4 min 23 s). Part 1, recorded from the application
+(\texttt{demo\_video.py}): custom material run, consecutive runs, 3D CAD, plots and dialogs. Part 2, every command run live
+(\texttt{demo\_submission.py}): the three root-cause probes, the \issue{235} test failing on \texttt{dev} and passing with the fix,
+and the issues on GitHub \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -728,6 +732,7 @@ python probes/probe_fatigue_range.py results/S1/TC01/input_dict.json
 python probes/probe_deck_ecm_units.py results/S1/TC01/input_dict.json
 python probes/probe_custom_base_keys.py results/S3/TC11/input_dict.json
 python export_osi.py                     # all cases as .osi -> osi/
-python demo_video.py                     # screencast -> results/demo/
+python demo_video.py                     # GUI screencast -> results/demo/
+python demo_submission.py                # full submission video (GUI + probes + PR #235 test)
 \end{Verbatim}
 \end{document}
